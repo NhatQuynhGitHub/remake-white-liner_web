@@ -1,0 +1,11 @@
+.nav {
+    justify-content: center;
+    align-items: first baseline;
+    background-color: #efefef;
+    width: 100%;
+    height: rem;
+}
+
+.nav li {
+    margin-left: 2rem;
+}
