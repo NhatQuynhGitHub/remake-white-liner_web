@@ -4,8 +4,12 @@ import Shop from "./ShopHeader"
 import MenuStyle from '@/styles/shop-header-menu.module.css'
 import BtnStyle from '@/styles/shop-header-menu.module.css'
 
+interface NavbarHeaderProps {
+    navList?: string
+    navItem?: string
+  }
 
-export default function NavbarHeader({ navList, navItem }){
+export default function NavbarHeader({ navList, navItem } : NavbarHeaderProps){
     
     return (
         <>

@@ -1,6 +1,10 @@
 import Link from "next/link";
 
-export default function ShopMenuDetail({shopList, shopItem}){
+interface ShopMenuDetailProps {
+    shopList?: string, shopItem?: string
+}
+
+export default function ShopMenuDetail({shopList, shopItem} : ShopMenuDetailProps){
     return (
         <ul className={shopList}>
             <li className={shopItem}><Link href="/">Bestseller</Link></li>

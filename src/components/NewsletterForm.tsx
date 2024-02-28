@@ -2,10 +2,13 @@
 import { useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
 
+interface NewsletterFormProps {
+    formClassName?: string, inputClassName?: string, btnClassName?: string
+}
 
 
-export default function NewsletterForm({formClassName, inputClassName, btnClassName}){
-    const [isSent, setIsSent] = useState()
+export default function NewsletterForm({formClassName, inputClassName, btnClassName} : NewsletterFormProps){
+    const [isSent, setIsSent] = useState(false)
 
     return (
         <form className={formClassName}>

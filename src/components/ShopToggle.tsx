@@ -6,8 +6,11 @@ import ShopMenuDetail from "./ShopMenuDetail";
 import ShopToggleMenuStyle from '@/styles/shop-toggle-menu.module.css'
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
+interface ShopToggleProps {
+    shopMenuStyle?: string, shopBtnStyle?: string, shopBackBtnStyle?: string
+}
 
-export default function ShopToggle({shopMenuStyle, shopBtnStyle, shopBackBtnStyle}){
+export default function ShopToggle({shopMenuStyle, shopBtnStyle, shopBackBtnStyle} : ShopToggleProps){
     const [showMenu, setShowMenu] = useState(false)
     function handleClick(){
         setShowMenu(!showMenu)

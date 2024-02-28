@@ -5,8 +5,11 @@ import BtnStyle from '@/styles/shop-toggle-menu.module.css'
 import BtnBackStyle from '@/styles/shop-toggle-menu.module.css'
 import ShopToggle from "./ShopToggle"
 
-
-export default function NavbarToggle({ navList, navItem }){
+interface NavbarTogglerProps {
+    navList?: string
+    navItem?: string
+  }
+export default function NavbarToggle({ navList, navItem } : NavbarTogglerProps ){
     
     return (
         <>
