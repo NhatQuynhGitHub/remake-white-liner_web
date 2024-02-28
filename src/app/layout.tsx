@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import FooterCopyright from "@/components/FooterCopyright";
+import Footer from "@/components/footer/Footer";
+import FooterCopyright from "@/components/footer/FooterCopyright";
 
 const open_Sans = Open_Sans({
   weight: [ "300" , "400" , "500" , "700"],
@@ -34,8 +34,8 @@ export default function RootLayout({
           {children}
         <div>
           <Footer />
+
         </div>
-        <FooterCopyright />
 
       </body>
     </html>

@@ -1,0 +1,21 @@
+.logo-header {
+    margin-left: 14rem;
+}
+
+.logo-footer {
+    margin-top: 4rem;
+}
+
+@media (max-width: 768px) {
+    .logo-header {
+        text-align: center;
+        width: 180px;
+        height: 90px;
+        margin: 0 30px;
+    }
+
+    .logo-footer {
+        margin: 0 auto;
+        text-align: center;
+    }
+}

@@ -1,11 +1,33 @@
-.nav {
+.nav__list {
+    display: flex;
     justify-content: center;
-    align-items: first baseline;
+    align-items: first center;
     background-color: #efefef;
     width: 100%;
-    height: rem;
+    height: 3rem;
+    
 }
 
-.nav li {
-    margin-left: 2rem;
+.nav__list--item {
+    margin-left: 4rem;
+}
+.nav__list--item a {
+    color: var(--text-quaternary-color);
+
+}
+
+.nav__list--item a:hover {
+    text-decoration: none;
+    color: var(--text-primary-color);
+}
+.nav__list--item a:focus {
+    font-weight: 700;
+    color: var(--text-primary-color);
+
+}
+
+@media (max-width: 768px) {
+    .nav__list {
+        display: none;
+    }
 }

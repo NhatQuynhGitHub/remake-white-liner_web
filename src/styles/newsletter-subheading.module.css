@@ -6,11 +6,16 @@
 .newsletter-input{
     width: 300px;
     height: 40px;
-    padding: 5px;
+    padding: 10px;
+    border: 2px solid #b1b1b1;
+    background-color: #ddd
 }
+
 .newsletter-btn {
     width: 50px;
     height: 40px;
     border: none;
+    background-color: var(--text-primary-color);
+    color: #fff;
 
 }

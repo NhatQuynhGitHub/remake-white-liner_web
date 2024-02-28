@@ -1,0 +1,39 @@
+.shop-toggle-menu {
+    position: fixed;
+    top: 0;
+    /* width: 100%; */
+    height: 100vh;
+    margin-top: 10rem;
+    text-align: center;
+}
+.shop-btn {
+    margin-bottom: 20px;
+    cursor: pointer;
+    color: var(--text-quaternary-color);
+
+}
+.shop-btn:hover {
+    text-decoration: underline;
+    color: var(--text-primary-color);
+}
+.shop-btn:focus {
+    text-decoration: underline;
+    font-size: 700;
+    color: var(--text-primary-color);
+}
+
+.shop-btn--back {
+    cursor: pointer;
+    color: var(--text-quaternary-color);
+}
+.shop-btn--back span {
+    text-transform: lowercase;
+}
+
+.shop__list {
+    text-align: center;
+    margin-top: 15px;
+}
+.shop__list--item {
+    margin: 0 20px 10px;
+}

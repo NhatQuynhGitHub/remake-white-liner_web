@@ -1,0 +1,31 @@
+.shop-btn {
+    cursor: pointer;
+    color: var(--text-quaternary-color);
+
+}
+.shop-btn:hover {
+    text-decoration: underline;
+    color: var(--text-primary-color);
+}
+
+.shop-btn:focus {
+    text-decoration: underline;
+    font-size: 700;
+    color: var(--text-primary-color);
+}
+.shop__list {
+    
+    position: absolute;
+    left: 36%;
+    background-color: #fff;
+    border: 2px solid green;
+    
+    width: 12rem;
+    height: 12.5rem;
+    margin-top: 15px;
+    padding: 30px 0px;
+}
+.shop__list--item {
+    width: 60%;
+    margin: 0 20px 10px;
+}

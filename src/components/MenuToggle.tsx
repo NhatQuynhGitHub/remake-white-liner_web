@@ -1,24 +1,37 @@
 'use client'
-import Navbar from "./Navbar";
 import SocialIcon from "./SocialIcon";
-import navMenu from "@/styles/nav-menu-toggle.module.css"
+import ListStyle from "@/styles/nav-menu-toggle.module.css"
+import ItemStyle from "@/styles/nav-menu-toggle.module.css"
+import MenuToggleStyle from '@/styles/nav-menu-toggle.module.css'
+import MenutoggleBtnStyle from '@/styles/nav-menu-toggle.module.css'
+import SocialIconStyle from '@/styles/social-icon.module.css'
+import SocialIconListStyle from '@/styles/social-icon.module.css'
+import SocialIconItemStyle from '@/styles/social-icon.module.css'
 import { IoIosClose, IoIosMenu } from "react-icons/io";
 import { useState } from "react";
+import NavbarToggle from "./NavbarToggle";
 
 export default function MenuToggle(){
-    const [toggle, setToggle] = useState(true)
+    const [toggle, setToggle] = useState(false)
     return (
-       <div className="menu-toggle-mobile">
+       <div className={MenuToggleStyle['menu-toggle-mobile']} >
             <button 
-                className="menu-btn"
+                className={MenutoggleBtnStyle["menu-btn"]}
                 onClick={() => setToggle(!toggle)}>
                 {toggle ?  <IoIosClose /> : <IoIosMenu /> }
             </button>
             {toggle && (
-                <div>
+                <div className={MenuToggleStyle['menu-toggle-mobile-detail']}>
                     <h2>Menu</h2>
-                    <Navbar className={navMenu['nav']} />
-                    <SocialIcon />
+                    <NavbarToggle 
+                        navList={ListStyle['nav__list']}
+                        navItem={ItemStyle['nav__list--item']}
+                    />
+                    <SocialIcon 
+                        socialIcon={SocialIconStyle['menu-toggle__social__icon']}
+                        socialIconList={SocialIconListStyle['menu-toggle__social__icon-list']}
+                        socialIconItem={SocialIconItemStyle['menu-toggle__social__icon-item']}
+                    />
                 </div>
             )}
        </div> 
