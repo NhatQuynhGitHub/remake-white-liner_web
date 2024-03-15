@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import SearchBar from "./SearchBar";
 import SearchProductsTable from "./SearchProductsTable";
 import SearchViewStyle from '@/styles/search-style.module.css'
-import {PRODUCTS, KEYWORDS} from '@/api/products.json'
+import productsInfo from '@/api/products.json'
 
 
-const rawProducts = PRODUCTS as Product[]
-const keywords = KEYWORDS
+const rawProducts = productsInfo.PRODUCTS as Product[]
+const keywords = productsInfo.KEYWORDS
 
 interface Product {
     id: number;

@@ -1,11 +1,11 @@
 import LineDivideStyle from '@/styles/search-style.module.css'
 import ProductsTableStyle from '@/styles/search-style.module.css'
 import ContainerStyle from '@/styles/search-style.module.css'
-import {PRODUCTS, KEYWORDS} from '@/api/products.json'
+import productsInfo from '@/api/products.json'
 import Image from 'next/image'
 
-const Products = PRODUCTS
-const Keywords = KEYWORDS
+const Products = productsInfo.PRODUCTS
+const Keywords = productsInfo.KEYWORDS
 
 export interface Product {
     id: number;
