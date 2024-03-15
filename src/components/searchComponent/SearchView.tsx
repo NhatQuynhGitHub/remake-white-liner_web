@@ -20,11 +20,11 @@ interface Product {
     images: string;
 }
 
-interface Keyword {keyword: string}
+// interface Keyword {keyword: string}
 
-interface SearchViewProps {
-    keywords : Keyword[]
-}
+// interface SearchViewProps {
+//     keywords : Keyword[]
+// }
 
 export default function SearchView(){
     const [searchResults, setSearchResults] = useState([])
