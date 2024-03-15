@@ -33,10 +33,11 @@
 
 /* Search View */
 .search__view {
-    z-index: 200px;
+    z-index: 1;
     position: absolute;
     background-color: #fff;
     border: 3px solid rebeccapurple ;
+
     top: 5%;
     left: 0;
     width: 100%;
@@ -132,6 +133,9 @@
     display: none;
 }
 
+/*Search Product table */
+
+/* --------- */
 
 
 @media (max-width: 768px) {
@@ -141,6 +145,11 @@
     }
     .search__bar--field-input {
         width: 90%;
+    }
+
+    .search__field--close-btn {
+        top: 90px;
+        right: 40px;
     }
 
     .search__products--table {

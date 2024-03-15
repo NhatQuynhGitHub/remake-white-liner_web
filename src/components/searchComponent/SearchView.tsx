@@ -6,7 +6,7 @@ import productsInfo from '@/api/products.json'
 
 
 const rawProducts = productsInfo.PRODUCTS as Product[]
-const keywords = productsInfo.KEYWORDS
+const Keywords = productsInfo.KEYWORDS
 
 interface Product {
     id: number;
@@ -20,11 +20,6 @@ interface Product {
     images: string;
 }
 
-// interface Keyword {keyword: string}
-
-// interface SearchViewProps {
-//     keywords : Keyword[]
-// }
 
 export default function SearchView(){
     const [searchResults, setSearchResults] = useState([])
