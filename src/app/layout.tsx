@@ -28,14 +28,14 @@ export default function RootLayout({
       lang="en"
       >
       <body>
-        <div>
+        <header>
           <Header />
-        </div>
+        </header>
           {children}
-        <div>
+        <footer>
           <Footer />
 
-        </div>
+        </footer>
 
       </body>
     </html>
