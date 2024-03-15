@@ -22,11 +22,11 @@ interface Product {
 
 interface Keyword {keyword: string}
 
-interface SearchFieldProps {
+interface SearchViewProps {
     keywords : Keyword[]
 }
 
-export default function SearchView({keywords} : SearchFieldProps){
+export default function SearchView(){
     const [searchResults, setSearchResults] = useState([])
     const [ searchText, setSearchText] = useState('')
     const [products, setProducts] = useState(rawProducts)
