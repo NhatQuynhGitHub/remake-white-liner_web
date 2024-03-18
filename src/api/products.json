@@ -3,88 +3,28 @@
 {
   "KEYWORDS": [
     {
-      "category": "Wooden Furniture",
+      "category": "decoration",
       "items": [
-        "Wood",
-        "Wooden",
-        "Office desks",
-        "Conference tables",
-        "Reception desks",
-        "Lounge seating",
-        "Cubicles and workstations",
-        "Modular office furniture",
-        "Wood office furniture",
-        "Wooden cabinets",
-        "Wooden shelves",
-        "Wooden bookcases",
-        "Oak furniture",
-        "Pine furniture",
-        "Mahogany furniture",
-        "Cherry wood furniture"
+        "hanging",
+        "pillow",
+        "mug"
+
       ]
     },
     {
-      "category": "Chairs",
+      "category": "for home",
       "items": [
-        "Office chairs",
-        "Leather office chairs",
-        "Mesh office chairs",
-        "Fabric office chairs",
-        "Ergonomic furniture",
-        "Swivel chairs",
-        "Executive chairs",
-        "Task chairs",
-        "Guest chairs",
-        "Armchairs",
-        "Stools"
+        "chairs",
+        "wall hanging"
       ]
     },
     {
-      "category": "Desk Types",
+      "category": "template",
       "items": [
-        "Height-adjustable desks",
-        "Standing desks",
-        "L-shaped desks",
-        "U-shaped desks",
-        "Corner desks",
-        "Computer desks",
-        "Writing desks",
-        "Executive desks"
-      ]
-    },
-    {
-      "category": "Materials",
-      "items": [
-        "Metal office furniture",
-        "Glass office furniture",
-        "Steelcase furniture",
-        "Herman Miller furniture",
-        "Industrial-style furniture",
-        "Contemporary office furniture",
-        "Traditional office furniture",
-        "Sustainable office furniture",
-        "Aluminum furniture",
-        "Stainless steel furniture",
-        "Tempered glass furniture",
-        "Recycled materials furniture"
-      ]
-    },
-    {
-      "category": "Other",
-      "items": [
-        "Collaborative furniture",
-        "Executive furniture",
-        "Acoustic furniture",
-        "Office storage solutions",
-        "Filing cabinets",
-        "Bookshelves",
-        "Drawer units",
-        "Credenzas",
-        "Storage cabinets",
-        "Lockers",
-        "Shelving units"
+        "card"
       ]
     }
+
   ],
   
     "PRODUCTS": [
@@ -95,7 +35,7 @@
         "price": 32.00,
         "discountPercentage": "...",
         "stock": 30,
-        "category": "decoration",
+        "category": ["decoration", "for home"],
         "thumbnail": "...",
         "images": "https://white-linen-theme.myshopify.com/cdn/shop/products/16.jpg?v=1656002863&width=2048"
       },
@@ -106,7 +46,7 @@
         "price": 22.00,
         "discountPercentage": "...",
         "stock": 10,
-        "category": "decoration",
+        "category": ["decoration", "for home"],
         "thumbnail": "...",
         "images": "https://white-linen-theme.myshopify.com/cdn/shop/products/11.jpg?v=1656002542&width=2048"
      },
@@ -117,7 +57,7 @@
       "price": 39.00,
       "discountPercentage": "...",
       "stock": 30,
-      "category": "decoration",
+      "category": ["decoration", "for home"],
       "thumbnail": "...",
       "images": "https://white-linen-theme.myshopify.com/cdn/shop/products/8.jpg?v=1656002497&width=2048"
    },
@@ -128,7 +68,7 @@
     "price": 22.00,
     "discountPercentage": 16.00,
     "stock": 5,
-    "category": "household",
+    "category": "for home",
     "thumbnail": "...",
     "images": "https://white-linen-theme.myshopify.com/cdn/shop/products/10.jpg?v=1656001924&width=2048"
     },
@@ -146,7 +86,7 @@
     {
       "id": 6,
       "title": "thank you card",
-      "description": "pillow",
+      "description": "...",
       "price": 6.00,
       "discountPercentage": "...",
       "stock": 80,
@@ -173,7 +113,7 @@
       "price": 8.00,
       "discountPercentage": "...",
       "stock": 30,
-      "category": "decoration",
+      "category": ["decoration", "for home"],
       "thumbnail": "...",
       "images": "https://white-linen-theme.myshopify.com/cdn/shop/products/SquareProductPhotoTemplate.jpg?v=1656002981&width=2048"
     },
@@ -184,7 +124,7 @@
       "price": 21.00,
       "discountPercentage": "...",
       "stock": 60,
-      "category": "decoration",
+      "category": ["decoration", "for home"],
       "thumbnail": "...",
       "images": "https://white-linen-theme.myshopify.com/cdn/shop/products/15.jpg?v=1656002740&width=2048"
     },
@@ -195,7 +135,7 @@
       "price": 45.00,
       "discountPercentage": "...",
       "stock": 60,
-      "category": "decoration",
+      "category": ["decoration", "for home"],
       "thumbnail": "...",
       "images": "https://white-linen-theme.myshopify.com/cdn/shop/products/14.jpg?v=1656002702&width=2048"
     },
@@ -206,7 +146,7 @@
       "price": 120.00,
       "discountPercentage": "...",
       "stock": 60,
-      "category": "decoration",
+      "category": ["decoration", "for home"],
       "thumbnail": "...",
       "images": "https://white-linen-theme.myshopify.com/cdn/shop/products/13.jpg?v=1656002662&width=2048"
     },
@@ -217,7 +157,7 @@
       "price": 57.00,
       "discountPercentage": "...",
       "stock": 60,
-      "category": "decoration",
+      "category": ["decoration", "for home"],
       "thumbnail": "...",
       "images": "https://white-linen-theme.myshopify.com/cdn/shop/products/12.jpg?v=1656002619&width=2048"
     },
@@ -228,7 +168,7 @@
       "price": 50.00,
       "discountPercentage": "...",
       "stock": 60,
-      "category": "decoration",
+      "category": ["decoration", "for home"],
       "thumbnail": "...",
       "images": "https://white-linen-theme.myshopify.com/cdn/shop/products/7.jpg?v=1656002332&width=2048"
     },

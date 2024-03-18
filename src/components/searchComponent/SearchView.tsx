@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import SearchBar from "./SearchBar";
 import SearchProductsTable from "./SearchProductsTable";
 import SearchViewStyle from '@/styles/search-style.module.css'
-import productsInfo from '@/api/products.json'
+// import productsInfo from '@/api/products.json'
 
 
-const rawProducts = productsInfo.PRODUCTS as Product[]
-const Keywords = productsInfo.KEYWORDS
+// const rawProducts = productsInfo.PRODUCTS as Product[]
+// const Keywords = productsInfo.KEYWORDS
 
 interface Product {
     id: number;
@@ -21,23 +21,24 @@ interface Product {
 }
 
 
+
 export default function SearchView(){
+    const [ filterText, setFilterText] = useState('')
     const [searchResults, setSearchResults] = useState([])
-    const [ searchText, setSearchText] = useState('')
-    const [products, setProducts] = useState(rawProducts)
-    const onSearchTextChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setSearchText(e.target.value)
-    }  
+    // const [products, setProducts] = useState(rawProducts)
+    // const onSearchTextChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    //     setSearchText(e.target.value)
+    // }  
 
     useEffect(() => {
-        console.log(searchText, "let's search for something")
+        console.log(filterText, "let's search for something")
         // const productsData = products.foreach(product) => {
         // }
         // })
-    }, [searchText])
+    }, [filterText])
 
     const onSearch = (searchResults: any) => {
-        setSearchText(searchResults)
+        setFilterText(searchResults)
         // our api to fetch the search result
 
         console.log( 'search', searchResults)
@@ -46,22 +47,19 @@ export default function SearchView(){
     return (
         <div className={SearchViewStyle["search__view"]}>
             <SearchBar 
-                textValue={searchText}
-                onSearchTextChange={setSearchText}
-                onSearchResultChange={setSearchResults}
-                onClick={() => onSearch(searchText)}
-                onClear={() => setSearchText('')}
-                products={products}
+                value={filterText}
+                onFilterTextChange={setFilterText}
+                // onSearchResultChange={setSearchResults}
+                onClear={() => setFilterText('')}
+                // onSelect={(products) => selectedProductItem}
             />
             <hr className={SearchViewStyle['line-divide']} />
             <div>
-                {
                     <SearchProductsTable
-                        // products={products}
-                        // onSearch={onSearch} 
-                        texting={searchText}    
+                        filterText={filterText}
+                        texting={filterText}    
                     />    
-                }     
+                     
             </div>
         </div>
     )

@@ -1,30 +1,21 @@
 "use client";
-import { IoClose, IoSearch } from "react-icons/io5";
+import {  IoSearch } from "react-icons/io5";
 import { IoIosCloseCircleOutline } from "react-icons/io";
-import SearchView from "./SearchView";
 // CSS
 import SearchBarStyle from "@/styles/search-style.module.css";
-import SearchProductsTable, { Product } from "./SearchProductsTable";
-import { useState } from "react";
 
 interface SearchBarProps {
-  textValue?: string;
-  onClick: () => void;
-  onSearchTextChange: any;
-  onSearchResultChange: any;
-  products: Product[];
+  value?: string;
+  onFilterTextChange: any;
+//   onSearchResultChange: any;
   onClear: () => void;
 }
 
 export default function SearchBar({
-  textValue,
-  onClick,
-  onSearchTextChange,
-  onSearchResultChange,
+  value,
+  onFilterTextChange,
   onClear,
-  products,
 }: SearchBarProps) {
-  console.log("products SearchBar", products);
 
   return (
     <>
@@ -37,8 +28,8 @@ export default function SearchBar({
               <form className={SearchBarStyle["search--form-input"]}>
                 <input
                   type="text"
-                  value={textValue}
-                  onChange={(e) => onSearchTextChange(e.target.value)}
+                  value={value}
+                  onChange={(e) => onFilterTextChange(e.target.value)}
                   className={SearchBarStyle["search--input-tab"]}
                 />
                 <label
