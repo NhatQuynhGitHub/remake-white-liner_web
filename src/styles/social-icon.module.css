@@ -3,7 +3,7 @@
     justify-content:center;
 }
 .header__social__icon-item {
-    margin-left: 5px;
+    /* margin-left: 5px; */
     font-size: 1.4rem;
     padding: 10px;
     cursor: pointer
@@ -33,12 +33,13 @@
 }
 
 
-
-@media (max-width: 768px) {
+@media (max-width: 989px ) {
     .header__social__icon {
         display: none;
     }
+}
 
+@media (max-width: 768px) {
     .footer__social__icon-list {
         position: absolute;
         top: 100%;

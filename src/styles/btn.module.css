@@ -1,0 +1,7 @@
+.btn-primary {
+    border: none;
+    background-color: var(--text--color);
+    color: #fff;
+    text-transform: uppercase;
+    padding: 12px 40px;
+}

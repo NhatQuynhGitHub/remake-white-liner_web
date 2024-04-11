@@ -1,17 +1,24 @@
-* {
+*, ::after, ::before {
     box-sizing: border-box;
 }
 
 :root {
+    --text--color: #717171;
     --text-primary-color: #545454;
     --text-secondary-color:  #757575;
     --text-tertiary-color: #c7c7c7;
     --text-quaternary-color: #969696;
 
+    --color-foreground: 113, 113, 113;
+
+    --font--size-title: 1.5rem
+    
 }
 
 body {
-    color: var(--text-primary-color);
+    color: var(--text--color);
+    margin: 0;
+
 }
 
 ul {
@@ -30,10 +37,8 @@ a:hover {
     cursor: pointer; 
     text-decoration: underline;
 }
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
+
+
 
 /* HEADER */
 

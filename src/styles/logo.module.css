@@ -6,6 +6,12 @@
     margin-top: 4rem;
 }
 
+@media (max-width: 989px ){
+    .logo-header {
+        margin-left: 0;
+    }
+}
+
 @media (max-width: 768px) {
     .logo-header {
         text-align: center;

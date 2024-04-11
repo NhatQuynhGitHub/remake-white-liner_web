@@ -3,7 +3,7 @@ import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/footer/Footer";
-import FooterCopyright from "@/components/footer/FooterCopyright";
+// import SliderAnnouncement from "@/components/SliderAnnouncement";
 
 const open_Sans = Open_Sans({
   weight: [ "300" , "400" , "500" , "700"],
@@ -27,16 +27,14 @@ export default function RootLayout({
       className={open_Sans.className}
       lang="en"
       >
-      <body>
+      <body suppressHydrationWarning={true}>
         <header>
           <Header />
         </header>
           {children}
         <footer>
           <Footer />
-
         </footer>
-
       </body>
     </html>
   );

@@ -1,7 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // images: {
+  //   domains: ["white-linen-theme.myshopify.com"],
+  // },
   images: {
-    domains: ["white-linen-theme.myshopify.com"],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'white-linen-theme.myshopify.com',
+        pathname: '**',
+      },
+    ],
   },
 };
 

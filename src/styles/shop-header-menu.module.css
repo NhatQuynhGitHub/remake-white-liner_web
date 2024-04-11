@@ -3,29 +3,31 @@
     color: var(--text-quaternary-color);
 
 }
-.shop-btn:hover {
-    text-decoration: underline;
+.shop-btn > span:hover {
+    text-decoration: none;
     color: var(--text-primary-color);
+    font-weight: 700;
 }
 
-.shop-btn:focus {
-    text-decoration: underline;
-    font-size: 700;
+.shop-btn > span:focus {
+    font-weight: 700;
     color: var(--text-primary-color);
 }
-.shop__list {
-    
+.shop__list { 
+    z-index: 2;
     position: absolute;
-    left: 36%;
+    top: 340px;
+    left: 37%;
     background-color: #fff;
-    border: 2px solid green;
     
-    width: 12rem;
-    height: 12.5rem;
+    width: 13rem;
+    height: 15.5rem;
     margin-top: 15px;
     padding: 30px 0px;
+    transition: transform 1s ease-in;
+    
 }
 .shop__list--item {
-    width: 60%;
-    margin: 0 20px 10px;
+    width: 90%;
+    margin: 0 20px 15px;
 }

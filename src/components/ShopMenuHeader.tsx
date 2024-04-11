@@ -9,7 +9,7 @@ interface ShopProps {
     shopMenuStyle?: string, shopBtnStyle?: string
 }
 
-export default function Shop({shopMenuStyle, shopBtnStyle} : ShopProps){
+export default function ShopMenuHeader({shopMenuStyle, shopBtnStyle} : ShopProps){
     const [showMenu, setShowMenu] = useState(false)
     function handleClick(){
         setShowMenu(!showMenu)

@@ -20,13 +20,10 @@ interface Product {
 }
 
 interface SearchProductsTableProps {
-  // products: Product[]
-  // onSearch: (searchTerm: string) => void
   texting?: string;
   filterText: any
 }
 
-// export default function SearchProductsTable({ products, onSearch, texting } : SearchProductsTableProps)
 
 interface ProductsItemProps {
   product: any;
@@ -54,7 +51,6 @@ export default function SearchProductsTable({
       <div className={ProductsTableStyle["container"]}>
         <div>
           <h3>Suggestion</h3>
-          <hr className={LineDivideStyle["line-divide"]} />
           <ul>
             {Keywords.map((keyword) => (
                 <li key={keyword.category}>
@@ -71,7 +67,6 @@ export default function SearchProductsTable({
 
         <div>
           <h3>Products</h3>
-          <hr className={LineDivideStyle["line-divide"]} />
           <ul>
             {Products
                 .filter((product) => (product.title.toLowerCase().includes(filterText.toLowerCase())))
@@ -82,7 +77,7 @@ export default function SearchProductsTable({
           </ul>
         </div>
         <div className={ContainerStyle["container"]}>
-          <p>Searching for  " {texting}"</p>
+            <p>Searching for &quot;{texting}&quot;</p>
         </div>
       </div>
     </div>

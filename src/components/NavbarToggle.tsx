@@ -13,20 +13,18 @@ export default function NavbarToggle({ navList, navItem } : NavbarTogglerProps )
     
     return (
         <>
-            <ul className={navList}>
-                <li className={navItem}><Link href="/">Home</Link></li>
-                <li className={navItem}>
-                    <ShopToggle
-                        shopMenuStyle={MenuStyle['shop-menu']}
-                        shopBtnStyle={BtnStyle['shop-btn']}
-                        shopBackBtnStyle={BtnBackStyle['shop-btn--back']}
-                    />
-                </li>
-                <li className={navItem}><Link href="/">About</Link></li>
-                <li className={navItem}><Link href="/">Blog</Link></li>
-                <li className={navItem}><Link href="/">FAQ</Link></li>
-                <li className={navItem}><Link href="/">Contact</Link></li>
-            </ul>
+            <div>
+                <ul className={navList}>
+                    <li className={navItem}><Link href="/">Home</Link></li>
+                    <li className={navItem}>
+                    <Link href="/">Shop →</Link>
+                    </li>
+                    <li className={navItem}><Link href="/">About</Link></li>
+                    <li className={navItem}><Link href="/">Blog</Link></li>
+                    <li className={navItem}><Link href="/">FAQ</Link></li>
+                    <li className={navItem}><Link href="/">Contact</Link></li>
+                </ul>
+            </div>
            
         </>
         

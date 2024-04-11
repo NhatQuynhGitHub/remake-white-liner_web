@@ -7,7 +7,6 @@ import SearchBarStyle from "@/styles/search-style.module.css";
 interface SearchBarProps {
   value?: string;
   onFilterTextChange: any;
-//   onSearchResultChange: any;
   onClear: () => void;
 }
 
@@ -45,7 +44,7 @@ export default function SearchBar({
               >
                 <IoIosCloseCircleOutline />
               </button>
-              <button>
+              <button className={SearchBarStyle['search__bar--btn-search']}>
                 <IoSearch />
               </button>
             </div>
