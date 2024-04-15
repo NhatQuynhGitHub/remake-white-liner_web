@@ -1,5 +1,6 @@
 .instagram-feed__list {
     display: flex;
+    margin: 0;
     width: 100%;
 }
 
