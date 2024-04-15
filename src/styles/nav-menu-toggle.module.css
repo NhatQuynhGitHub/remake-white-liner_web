@@ -84,7 +84,10 @@
         background-color: var(--text-primary-color);
         border: none;
         margin: 20px 0;
-        text-align: center;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         font-size: 1.5rem;
         color: white;
