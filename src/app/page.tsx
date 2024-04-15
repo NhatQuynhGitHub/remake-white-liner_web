@@ -16,6 +16,7 @@ import News from "@/api/news.json";
 import Link from "next/link";
 import CardBlog from "@/components/blogpage/CardBlog";
 import ArticleSlider from "@/components/blogpage/ArticleSlider";
+import InstagramFeed from "@/components/homepage component/InstagramFeed";
 
 const news = News.NEWS;
 export default function Home() {
@@ -65,11 +66,11 @@ export default function Home() {
           <section className={ShopPickStyle["shop"]}>
             <div className={HomeStyle["container"]}>
               <ShopPick />
-              <ShopPickProductSlider />
+              {/* <ShopPickProductSlider /> */}
             </div>
-            <div>
+            {/* <div>
               <Btn btn="View all" />
-            </div>
+            </div> */}
           </section>
 
           <section className={HomeStyle["container"]}>
@@ -101,13 +102,13 @@ export default function Home() {
                 alt="Blog banner in the home page"
                 width={1500}
                 height={1000}
-                className={HomeStyle['article--banner-img']}
+                className={HomeStyle["article--banner-img"]}
               />
             </div>
             <div>
               <div className={HomeStyle["article__card"]}>
                 <ul className={HomeStyle["article__card--list"]}>
-                  {news.slice(0,3).map((item) => (
+                  {news.slice(0, 3).map((item) => (
                     <li
                       key={item.id}
                       className={HomeStyle["article__card--list-item"]}
@@ -119,20 +120,41 @@ export default function Home() {
                           title={item.title}
                           date={item.date}
                           content={item.content}
-                          classNameDetail={HomeStyle['card-blog__detail']}
-                          classNameDetailImg={HomeStyle['card-blog__detail--img']}
-                          classNameCardBlogImg={HomeStyle['card-blog--img']}
-                          classNameDetailInfo={HomeStyle['card-blog__detail-info']}
-                          classNameContent={HomeStyle['card-blog__detail--content']}
-                          classNameDate={HomeStyle['card-blog__detail--date']}
-                          classNameTitle={HomeStyle['card-blog__detail--title']}
-                        />  
+                          classNameDetail={HomeStyle["card-blog__detail"]}
+                          classNameDetailImg={
+                            HomeStyle["card-blog__detail--img"]
+                          }
+                          classNameCardBlogImg={HomeStyle["card-blog--img"]}
+                          classNameDetailInfo={
+                            HomeStyle["card-blog__detail-info"]
+                          }
+                          classNameContent={
+                            HomeStyle["card-blog__detail--content"]
+                          }
+                          classNameDate={HomeStyle["card-blog__detail--date"]}
+                          classNameTitle={HomeStyle["card-blog__detail--title"]}
+                        />
                       </Link>
                     </li>
                   ))}
                 </ul>
               </div>
               <ArticleSlider />
+            </div>
+          </section>
+
+          <section className={HomeStyle["instagram__section"]}>
+            <div>
+              <Image
+                src="/images/instagram-banner.webp"
+                alt="Instagram banner"
+                width={1000}
+                height={1000}
+                className={HomeStyle['instagram--banner-img']}
+              />
+            </div>
+            <div>
+              <InstagramFeed />
             </div>
           </section>
         </main>

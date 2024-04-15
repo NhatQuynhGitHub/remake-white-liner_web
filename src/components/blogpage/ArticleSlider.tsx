@@ -8,7 +8,7 @@ import { it } from "node:test";
 
 const news = News.NEWS;
 
-const Articles = news.slice(0, 3).map((item) => (
+const Articles = news.map((item) => (
         <CardBlog
             key={item.id}
             src={item.imagesUrl}

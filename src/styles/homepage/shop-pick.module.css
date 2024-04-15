@@ -35,11 +35,12 @@
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
+
     .shop-pick {
         margin: 0;
     }
     .shop__products {
-        display: none;
+        display: flex;
     }
     .product-card__list {
         flex-direction: column;
