@@ -83,7 +83,7 @@
         border-radius: 25px;
         background-color: var(--text-primary-color);
         border: none;
-        margin: 20px 0;
+        margin: 20px auto;
 
         display: flex;
         align-items: center;
