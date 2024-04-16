@@ -183,6 +183,9 @@
         width: 100%;
         height: auto;
     }
+     .instagram--banner-img-mobile {
+        display: none;
+    }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
@@ -215,6 +218,7 @@
             height: 380px;
             margin: 15px;
             text-align: center;
+            /* overflow: hidden; */
 
         }
 
@@ -306,6 +310,16 @@
                 border: none;
                 color: #878383;
             }
+
+    /* INSTAGRAM FEED */
+        .instagram--banner-img {
+            display: none;
+        }
+        .instagram--banner-img-mobile {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
 
 
         

@@ -1,3 +1,7 @@
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
 .instagram-feed__list {
     display: flex;
     margin: 0;
@@ -10,6 +14,7 @@
 
 .instagram-feed__item-box  {
     position: relative;
+    cursor: pointer;
 }
 .instagram-feed__item-box .instagram--box-icon {
     display: none;
@@ -42,5 +47,92 @@
 .instagram--box-img {
     width: 100%;
     height: auto;
+}
+
+/* INSTAGRAM-FEED WINDOW */
+    .instagram-feed__window {
+        border: 2px solid rebeccapurple;
+        padding: 30px 0;
+        position: absolute;
+        background-color: #fff;
+        z-index: 3;
+        top: 0;
+        bottom: 0;
+        left: 10%;
+        width: 80vw;
+        height: 85vh;
+
+    }
+    .instagram-feed__window__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    .instagram-feed__window__header-label {
+        flex-shrink: 0;
+        flex-grow: 10;
+        text-transform: capitalize;
+    }
+
+    .instagram-feed__window__header-icon {
+        width: 50px;
+        height: 50px;
+        padding: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 1;
+        font-size: 1.2rem;
+    }
+    .instagram-feed__window__header-btn-close {
+        border: none;
+        background-color: transparent;
+        color: var(--text--color);
+        font-size: 2.2rem;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 1;
+    }
+
+    .instagram-feed__window__detail {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 50px;
+    }
+    
+    .instagram-feed__window-img {
+        width: 100%;
+        height: auto;
+        
+    }
+    .instagram-feed__window__detail-content {
+        margin-top: 30px;
+    }
+    
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+        .instagram-feed__window  {
+            width: 100%;
+            left: 0;
+        }
+
+        .instagram-feed__window__detail {
+            display: block;
+        }
+
+        .instagram-feed__window-img {
+            width: 100%;
+            height: auto;
+        }
+        .instagram-feed__window__detail-content {
+            margin-top: 30px;
+        }
+    
 }
 

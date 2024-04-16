@@ -143,14 +143,25 @@ export default function Home() {
             </div>
           </section>
 
-          <section className={HomeStyle["instagram__section"]}>
+          <section 
+            className={HomeStyle["instagram__section"]}
+            style={{position: 'relative'}}
+          >
             <div>
               <Image
                 src="/images/instagram-banner.webp"
                 alt="Instagram banner"
                 width={1000}
                 height={1000}
-                className={HomeStyle['instagram--banner-img']}
+                className={HomeStyle["instagram--banner-img"]}
+              />
+
+              <Image
+                src="/images/instagram-banner-mobile.webp"
+                alt="Instagram banner on mobile"
+                width={1000}
+                height={1000}
+                className={HomeStyle["instagram--banner-img-mobile"]}
               />
             </div>
             <div>

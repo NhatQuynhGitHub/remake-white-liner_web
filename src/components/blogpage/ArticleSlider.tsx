@@ -3,7 +3,6 @@ import CardBlogSlider from "./CardBlogSlider";
 
 import News from "@/api/news.json";
 import CardBlog from "./CardBlog";
-import { it } from "node:test";
 
 
 const news = News.NEWS;
