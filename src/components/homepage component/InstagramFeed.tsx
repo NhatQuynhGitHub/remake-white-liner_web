@@ -50,7 +50,7 @@ export default function InstagramFeed() {
   const instagramBox = InstagramBoxes[boxIndex];
 
   return (
-    <div className={InstagramFeedStyle["instagram-feed"]} >
+    <div className={InstagramFeedStyle["instagram-feed"]}>
       <ul className={InstagramFeedStyle["instagram-feed__list"]}>
         {InstagramBoxes.map((box, index) => (
           <li
@@ -63,59 +63,69 @@ export default function InstagramFeed() {
         ))}
       </ul>
       {ShowWindow && boxIndex !== null && (
-        <div className={InstagramFeedStyle["instagram-feed__window"]}>
+        <div>
+          <div
+            className={
+              InstagramFeedStyle["modal-behind_instagram-feed__window"]
+            }
+          ></div>
           <div className={InstagramFeedStyle['container']}>
-            <div
-              className={InstagramFeedStyle["instagram-feed__window__header"]}
-            >
-              <FaInstagram
-                className={
-                  InstagramFeedStyle["instagram-feed__window__header-icon"]
-                }
-              />
-              <Link
-                href="/"
-                className={
-                  InstagramFeedStyle["instagram-feed__window__header-label"]
-                }
-              >
-                <span>white_linen31</span>
-              </Link>
-              <button
-                className={
-                  InstagramFeedStyle["instagram-feed__window__header-btn-close"]
-                }
-              >
-                <IoIosClose onClick={() => setShowWindow(false)} />
-              </button>
-            </div>
-            <div
-              className={InstagramFeedStyle["instagram-feed__window__detail"]}
-            >
+            <div className={InstagramFeedStyle["instagram-feed__window"]}>
               <div
-                className={
-                  InstagramFeedStyle["instagram-feed__window__detail-img"]
-                }
+                className={InstagramFeedStyle["instagram-feed__window__header"]}
               >
-                <Image
-                  src={instagramBox.scr}
-                  alt={"Present for" + " " + instagramBox.alt}
-                  width={1000}
-                  height={1000}
-                  className={InstagramFeedStyle["instagram-feed__window-img"]}
+                <FaInstagram
+                  className={
+                    InstagramFeedStyle["instagram-feed__window__header-icon"]
+                  }
                 />
+                <Link
+                  href="/"
+                  className={
+                    InstagramFeedStyle["instagram-feed__window__header-label"]
+                  }
+                >
+                  <span>white_linen31</span>
+                </Link>
+                <button
+                  className={
+                    InstagramFeedStyle[
+                      "instagram-feed__window__header-btn-close"
+                    ]
+                  }
+                >
+                  <IoIosClose onClick={() => setShowWindow(false)} />
+                </button>
               </div>
               <div
-                className={
-                  InstagramFeedStyle["instagram-feed__window__detail-content"]
-                }
+                className={InstagramFeedStyle["instagram-feed__window__detail"]}
               >
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
-                  explicabo officiis nisi laborum, repudiandae, quam
-                  necessitatibus quas cum voluptate architecto sit voluptatibus
-                  nam ex? Tenetur at aliquid recusandae explicabo ratione?
-                </p>
+                <div
+                  className={
+                    InstagramFeedStyle["instagram-feed__window__detail-img"]
+                  }
+                >
+                  <Image
+                    src={instagramBox.scr}
+                    alt={"Present for" + " " + instagramBox.alt}
+                    width={1000}
+                    height={1000}
+                    className={InstagramFeedStyle["instagram-feed__window-img"]}
+                  />
+                </div>
+                <div
+                  className={
+                    InstagramFeedStyle["instagram-feed__window__detail-content"]
+                  }
+                >
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+                    explicabo officiis nisi laborum, repudiandae, quam
+                    necessitatibus quas cum voluptate architecto sit
+                    voluptatibus nam ex? Tenetur at aliquid recusandae explicabo
+                    ratione?
+                  </p>
+                </div>
               </div>
             </div>
           </div>

@@ -205,6 +205,7 @@
             margin-bottom: 50px;
             position: relative;
             padding-bottom: 50px;
+            overflow: hidden;
 
         }
         .article__card {
@@ -212,13 +213,12 @@
         }
 
         .article__slider {
-            display: block;
+            display: inline-block;
             width: 100%;
             max-width: 365px;
             height: 380px;
             margin: 15px;
             text-align: center;
-            /* overflow: hidden; */
 
         }
 
