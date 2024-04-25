@@ -1,135 +1,95 @@
 "use client";
 import Image from "next/image";
 import InstagramFeedStyle from "@/styles/homepage/instagram-feed.module.css";
-import { FaInstagram } from "react-icons/fa";
-import Link from "next/link";
 import { useState } from "react";
-import { IoIosClose } from "react-icons/io";
-// import box1 from "./../../../public/images/instagram-box1.jpg";
-// import box2 from "./../../../public/images/instagram-box2.jpg";
-// import box3 from "./../../../public/images/instagram-box3.jpg";
-// import box4 from "./../../../public/images/instagram-box4.jpg";
-// import box5 from "./../../../public/images/instagram-box5.jpg";
+
+import InstagramWindowSlider from "./InstagramWindowSlider";
+import { FaInstagram } from "react-icons/fa";
 
 const InstagramBoxes = [
   {
     id: 1,
     scr: "/images/instagram-box1.jpg",
     alt: "Instagram tag 1",
-  },
-  {
-    id: 2,
-    scr: "/images/instagram-box2.jpg",
-    alt: "Instagram tag 2",
-  },
-  {
-    id: 3,
-    scr: "/images/instagram-box3.jpg",
-    alt: "Instagram tag 3",
-  },
-  {
-    id: 4,
-    scr: "/images/instagram-box4.jpg",
-    alt: "Instagram tag 1",
-  },
-  {
-    id: 5,
-    scr: "/images/instagram-box5.jpg",
-    alt: "Instagram tag 5",
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum explicabo officiis nisi laborum, repudiandae, quam necessitatibus quas cum voluptate architecto sit voluptatibus nam ex? Tenetur at aliquid recusandae explicabo ratione? ",
+      date: "Fer 07, 2023"
+    },
+    {
+      id: 2,
+      scr: "/images/instagram-box2.jpg",
+      alt: "Instagram tag 2",
+      content:
+      "Lorem ipsum dolor sit",
+      date: "may 03, 2023"
+    },
+    {
+      id: 3,
+      scr: "/images/instagram-box3.jpg",
+      alt: "Instagram tag 3",
+      content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum explicabo ",
+      date: "may 05, 2023"
+    },
+    {
+      id: 4,
+      scr: "/images/instagram-box4.jpg",
+      alt: "Instagram tag 1",
+      content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
+      date: "june 03, 2023"
+    },
+    {
+      id: 5,
+      scr: "/images/instagram-box5.jpg",
+      alt: "Instagram tag 5",
+      content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum explicabo officiis nisi laborum, repudiandae, quam necessitatibus quas cum voluptate architecto sit voluptatibus nam ex? Tenetur at aliquid recusandae explicabo ratione? ",
+      date: "oct 30, 2023"
   },
 ];
 export default function InstagramFeed() {
-  const [boxIndex, setBoxIndex] = useState(0);
   const [ShowWindow, setShowWindow] = useState(false);
+  const [boxIndex, setBoxIndex] = useState(0);
 
-  const handleInstagramBoxes = (index: any) => {
+ function handleInstagramBoxes (index: any){
     setShowWindow(!ShowWindow);
     setBoxIndex(index);
   };
 
-  const instagramBox = InstagramBoxes[boxIndex];
-
+  function NextBox() {
+    setBoxIndex((index) => {
+      if (index === 0) return InstagramBoxes.length - 1;
+      return index - 1;
+    });
+  }
+  function PrevBox() {
+    setBoxIndex((index) => {
+      if (index === InstagramBoxes.length - 1) return 0;
+      return index + 1;
+    });
+  }
   return (
     <div className={InstagramFeedStyle["instagram-feed"]}>
       <ul className={InstagramFeedStyle["instagram-feed__list"]}>
-        {InstagramBoxes.map((box, index) => (
+        {InstagramBoxes.map((box: any, index: any) => (
           <li
-            key={box.id}
+            key={index}
             className={InstagramFeedStyle["instagram-feed__item"]}
             onClick={() => handleInstagramBoxes(index)}
           >
-            {<InstagramFeedBox src={box.scr} alt={box.alt} />}
+             <InstagramFeedBox src={box.scr} alt={box.alt} />  
           </li>
         ))}
       </ul>
-      {ShowWindow && boxIndex !== null && (
-        <div>
-          <div
-            className={
-              InstagramFeedStyle["modal-behind_instagram-feed__window"]
-            }
-          ></div>
-          <div className={InstagramFeedStyle['container']}>
-            <div className={InstagramFeedStyle["instagram-feed__window"]}>
-              <div
-                className={InstagramFeedStyle["instagram-feed__window__header"]}
-              >
-                <FaInstagram
-                  className={
-                    InstagramFeedStyle["instagram-feed__window__header-icon"]
-                  }
-                />
-                <Link
-                  href="/"
-                  className={
-                    InstagramFeedStyle["instagram-feed__window__header-label"]
-                  }
-                >
-                  <span>white_linen31</span>
-                </Link>
-                <button
-                  className={
-                    InstagramFeedStyle[
-                      "instagram-feed__window__header-btn-close"
-                    ]
-                  }
-                >
-                  <IoIosClose onClick={() => setShowWindow(false)} />
-                </button>
-              </div>
-              <div
-                className={InstagramFeedStyle["instagram-feed__window__detail"]}
-              >
-                <div
-                  className={
-                    InstagramFeedStyle["instagram-feed__window__detail-img"]
-                  }
-                >
-                  <Image
-                    src={instagramBox.scr}
-                    alt={"Present for" + " " + instagramBox.alt}
-                    width={1000}
-                    height={1000}
-                    className={InstagramFeedStyle["instagram-feed__window-img"]}
-                  />
-                </div>
-                <div
-                  className={
-                    InstagramFeedStyle["instagram-feed__window__detail-content"]
-                  }
-                >
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
-                    explicabo officiis nisi laborum, repudiandae, quam
-                    necessitatibus quas cum voluptate architecto sit
-                    voluptatibus nam ex? Tenetur at aliquid recusandae explicabo
-                    ratione?
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      {ShowWindow && (
+        <InstagramWindowSlider
+          InstagramBoxes={InstagramBoxes}
+          boxIndex={boxIndex}
+          handleCloseWindow={() => setShowWindow(false)}
+          onNextBox={NextBox}
+          onPrevBox={PrevBox}
+        />
       )}
     </div>
   );

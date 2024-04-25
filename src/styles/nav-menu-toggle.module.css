@@ -20,7 +20,6 @@
     border: none;
     margin: 20px 0;
 
-    font-size: 2.2rem;
     color: white;
 }
 
@@ -93,7 +92,7 @@
     }
     
     .menu-btn > * {
-        font-size: 2.2rem;
+        font-size: 2rem;
         padding-bottom: 5px;   
         text-align: center; 
     }
