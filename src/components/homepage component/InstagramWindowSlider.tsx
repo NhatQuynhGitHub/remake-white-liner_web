@@ -1,7 +1,8 @@
 import InstagramFeedStyle from "@/styles/homepage/instagram-feed.module.css";
 import Link from "next/link";
 import Image from "next/image";
-import { FaInstagram, FaRegWindowClose } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { IoIosClose } from "react-icons/io";
 import { RxChevronLeft, RxChevronRight } from "react-icons/rx";
 
 interface InstagramWindowSliderProps {
@@ -78,16 +79,15 @@ export default function InstagramWindowSlider({
                         <span>white_linen31</span>
                       </Link>
                       <button
+                        onClick={handleCloseWindow}
+                        style={{ cursor: "pointer" }}
                         className={
                           InstagramFeedStyle[
                             "instagram__window__item--header-btn-close"
                           ]
                         }
                       >
-                        <FaRegWindowClose
-                          onClick={handleCloseWindow}
-                          style={{ cursor: "pointer" }}
-                        />
+                        <IoIosClose />
                       </button>
                     </div>
 
@@ -145,16 +145,15 @@ export default function InstagramWindowSlider({
                       <span>white_linen31</span>
                     </Link>
                     <button
+                      onClick={handleCloseWindow}
+                      style={{ cursor: "pointer" }}
                       className={
                         InstagramFeedStyle[
                           "instagram__window__item--header-btn-close"
                         ]
                       }
                     >
-                      <FaRegWindowClose
-                        onClick={handleCloseWindow}
-                        style={{ cursor: "pointer" }}
-                      />
+                      <IoIosClose />
                     </button>
                   </div>
 
