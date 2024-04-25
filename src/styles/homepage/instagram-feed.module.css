@@ -189,8 +189,6 @@
     }
     .btn-close {
         z-index: 10;
-        right: 10px;
-        position: absolute;
         margin-right: 10px;
         border: none;
         background-color: #fff;
@@ -248,8 +246,7 @@
         }
         
         .btn-close {
-            position: absolute;
-            z-index: 10;
+            flex: 1;
             color: #949191;
             margin-right: 0;
         }
@@ -280,7 +277,6 @@
         .instagram__window__item--header {
             order: 1;
             padding: 10px 20px ;
-            width: 100%;
         }
         .instagram__window__item--header::before {
             display: none;

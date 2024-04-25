@@ -123,13 +123,15 @@ export default function InstagramWindowSlider({
                       InstagramFeedStyle["instagram__window__item--header"]
                     }
                   >
-                    <FaInstagram
-                      className={
-                        InstagramFeedStyle[
-                          "instagram__window__item--header-icon"
-                        ]
-                      }
-                    />
+                    <Link href="/">
+                      <FaInstagram
+                        className={
+                          InstagramFeedStyle[
+                            "instagram__window__item--header-icon"
+                          ]
+                        }
+                      />
+                    </Link>
                     <Link
                       href="/"
                       className={
@@ -145,7 +147,9 @@ export default function InstagramWindowSlider({
                       style={{ cursor: "pointer" }}
                       className={InstagramFeedStyle["btn-close"]}
                     >
-                      <IoIosClose />
+                      <span>
+                        <IoIosClose />
+                      </span>
                     </button>
                   </div>
 
