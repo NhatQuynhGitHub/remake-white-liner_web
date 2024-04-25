@@ -87,14 +87,15 @@ export default function InstagramWindowSlider({
                           ]
                         }
                       >
-                        {/* <IoIosClose /> */}
-                        X
+                        <IoIosClose />
+                        x
                       </button>
                     </div>
+                    <IoIosClose  style={{fontSize:"2rem"}}/>
 
                     <div
                       className={
-                        InstagramFeedStyle["instagram__window__item-content"]
+                          InstagramFeedStyle["instagram__window__item-content"]
                       }
                     >
                       <p>{box.content}</p>
@@ -154,14 +155,15 @@ export default function InstagramWindowSlider({
                         ]
                       }
                     >
-                      {/* <IoIosClose /> */}
+                      <IoIosClose />
                       x
                     </button>
                   </div>
+                  <IoIosClose />
 
                   <div
                     className={
-                      InstagramFeedStyle["instagram__window__item-content"]
+                        InstagramFeedStyle["instagram__window__item-content"]
                     }
                   >
                     <p>{box.content}</p>
