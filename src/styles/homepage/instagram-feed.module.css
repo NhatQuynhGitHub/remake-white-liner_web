@@ -243,9 +243,12 @@
             font-size: 1.8rem;
             color: #949191;
         }
+        
         .instagram__window__item--header-btn-close {
+            color: #949191;
             margin-right: 5px;
         }
+
         .modal-behind_instagram__window {
             padding: 0;
         }

@@ -87,7 +87,8 @@ export default function InstagramWindowSlider({
                           ]
                         }
                       >
-                        <IoIosClose />
+                        {/* <IoIosClose /> */}
+                        X
                       </button>
                     </div>
 
@@ -153,7 +154,8 @@ export default function InstagramWindowSlider({
                         ]
                       }
                     >
-                      <IoIosClose />
+                      {/* <IoIosClose /> */}
+                      x
                     </button>
                   </div>
 
