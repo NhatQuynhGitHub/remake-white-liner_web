@@ -204,6 +204,10 @@
     .instagram__window__item-content {
         margin: 20px;
         flex-grow: 100;
+        
+    }
+
+    .instagram__window__item-content p {
         display: -webkit-box;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 2;
@@ -238,6 +242,9 @@
         .btn-control-prev > * {
             font-size: 1.8rem;
             color: #949191;
+        }
+        .instagram__window__item--header-btn-close {
+            margin-right: 5px;
         }
         .modal-behind_instagram__window {
             padding: 0;
