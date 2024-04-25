@@ -187,10 +187,10 @@
         flex-shrink: 1;
         font-size: 1.5rem;
     }
-    .instagram__window__item--header-btn-close {
+    .btn-close {
         margin-right: 10px;
         border: none;
-        background-color: transparent;
+        background-color: #fff;
         color: var(--text--color);
         font-size: 2.2rem;
         width: 50px;
@@ -244,9 +244,9 @@
             color: #949191;
         }
         
-        .instagram__window__item--header-btn-close {
+        .btn-close {
             color: #949191;
-            margin-right: 5px;
+            margin-right: 0;
         }
 
         .modal-behind_instagram__window {

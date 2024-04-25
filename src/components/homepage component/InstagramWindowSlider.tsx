@@ -81,21 +81,16 @@ export default function InstagramWindowSlider({
                       <button
                         onClick={handleCloseWindow}
                         style={{ cursor: "pointer" }}
-                        className={
-                          InstagramFeedStyle[
-                            "instagram__window__item--header-btn-close"
-                          ]
-                        }
+                        className={InstagramFeedStyle["btn-close"]}
                       >
                         <IoIosClose />
-                        x
                       </button>
                     </div>
-                    <IoIosClose  style={{fontSize:"2rem"}}/>
+                    
 
                     <div
                       className={
-                          InstagramFeedStyle["instagram__window__item-content"]
+                        InstagramFeedStyle["instagram__window__item-content"]
                       }
                     >
                       <p>{box.content}</p>
@@ -149,21 +144,16 @@ export default function InstagramWindowSlider({
                     <button
                       onClick={handleCloseWindow}
                       style={{ cursor: "pointer" }}
-                      className={
-                        InstagramFeedStyle[
-                          "instagram__window__item--header-btn-close"
-                        ]
-                      }
+                      className={InstagramFeedStyle["btn-close"]}
                     >
                       <IoIosClose />
-                      x
                     </button>
                   </div>
-                  <IoIosClose />
+                  
 
                   <div
                     className={
-                        InstagramFeedStyle["instagram__window__item-content"]
+                      InstagramFeedStyle["instagram__window__item-content"]
                     }
                   >
                     <p>{box.content}</p>
