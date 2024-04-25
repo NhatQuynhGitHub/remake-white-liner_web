@@ -86,7 +86,6 @@ export default function InstagramWindowSlider({
                         <IoIosClose />
                       </button>
                     </div>
-                    
 
                     <div
                       className={
@@ -149,7 +148,6 @@ export default function InstagramWindowSlider({
                       <IoIosClose />
                     </button>
                   </div>
-                  
 
                   <div
                     className={

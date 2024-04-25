@@ -188,6 +188,9 @@
         font-size: 1.5rem;
     }
     .btn-close {
+        z-index: 10;
+        right: 10px;
+        position: absolute;
         margin-right: 10px;
         border: none;
         background-color: #fff;
@@ -245,6 +248,8 @@
         }
         
         .btn-close {
+            position: absolute;
+            z-index: 10;
             color: #949191;
             margin-right: 0;
         }
