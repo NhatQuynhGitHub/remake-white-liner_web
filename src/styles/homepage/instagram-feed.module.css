@@ -188,6 +188,7 @@
         font-size: 1.5rem;
     }
     .instagram__window__item--header-btn-close {
+        margin-right: 10px;
         border: none;
         background-color: transparent;
         color: var(--text--color);
