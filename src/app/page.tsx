@@ -3,6 +3,7 @@ import Input from "@/styles/newsletter-subheading.module.css";
 import BtnStyle from "@/styles/newsletter-subheading.module.css";
 import HomeStyle from "@/styles/homepage/homepage.module.css";
 import ShopPickStyle from "@/styles/homepage/shop-pick.module.css";
+import CollectionStyle from "@/styles/homepage/collection.module.css";
 
 import NewsletterForm from "@/components/NewsletterForm";
 import HeroHomepage from "@/components/homepage component/HeroHomepage";
@@ -10,15 +11,16 @@ import Collection from "@/components/homepage component/Collection";
 import ShopPick from "@/components/homepage component/ShopPick";
 import Image from "next/image";
 import Comment from "@/components/homepage component/Comment";
-import ShopPickProductSlider from "@/components/homepage component/ShopPickProductSlider";
-import Btn from "@/components/Btn";
 import News from "@/api/news.json";
+import CollectionsCard from "@/api/products.json";
 import Link from "next/link";
 import CardBlog from "@/components/blogpage/CardBlog";
 import ArticleSlider from "@/components/blogpage/ArticleSlider";
 import InstagramFeed from "@/components/homepage component/InstagramFeed";
 
 const news = News.NEWS;
+const collectionsCard = CollectionsCard.COLLECTIONS;
+
 export default function Home() {
   return (
     <>
@@ -39,7 +41,30 @@ export default function Home() {
           </section>
 
           <section className={HomeStyle["container"]}>
-            <Collection />
+            <div className={CollectionStyle["collection__section"]}>
+              <ul className={CollectionStyle["collection__list"]}>
+                {collectionsCard.map((collection: any) => (
+                  <li
+                    key={collection.id}
+                    className={CollectionStyle["collection__item"]}
+                  >
+                    <Link
+                      href={`/collections/${collection.category
+                        .toLocaleLowerCase()
+                        .replace(/\s+/g, "-")}`}
+                      className={CollectionStyle["collection__item-link"]}
+                    >
+                      <Collection
+                        src={collection.url}
+                        alt={collection.alt}
+                        width={300}
+                        height={320}
+                      />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </section>
 
           <section className={HomeStyle["shop__banner"]}>
@@ -66,11 +91,7 @@ export default function Home() {
           <section className={ShopPickStyle["shop"]}>
             <div className={HomeStyle["container"]}>
               <ShopPick />
-              {/* <ShopPickProductSlider /> */}
             </div>
-            {/* <div>
-              <Btn btn="View all" />
-            </div> */}
           </section>
 
           <section className={HomeStyle["container"]}>
@@ -143,9 +164,9 @@ export default function Home() {
             </div>
           </section>
 
-          <section 
+          <section
             className={HomeStyle["instagram__section"]}
-            style={{position: 'relative'}}
+            style={{ position: "relative" }}
           >
             <div>
               <Image

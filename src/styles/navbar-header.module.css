@@ -1,3 +1,7 @@
+.active {
+    font-weight: 700;
+    color: var(--text-quaternary-color);
+}
 /* Navbar */
 .nav__list {
     display: flex;

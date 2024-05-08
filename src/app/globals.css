@@ -53,6 +53,24 @@ a:hover {
     justify-content: space-around;
 }
 
+.hop-dropdown--menu {
+    border: 2px solid red;
+}
+.active {
+    font-weight: 700;
+    color: var(--text-quaternary-color);
+}
+.active-menu-toggle__shop {
+    display: block;
+    transform: translateY(0);
+    transition: 2s ease;
+}
+.inactive-menu-toggle__shop {
+    display: none;
+    transform: translateY(90);
+    transition: 2s ease
+}
+
 
 
 /* RESPONSIVE */
@@ -61,3 +79,4 @@ a:hover {
         display: none;
     }
 }
+

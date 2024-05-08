@@ -1,6 +1,14 @@
 
 
 {
+
+  "COLLECTIONS": [
+    { "id": 1, "url": "/images/1.webp", "alt": "BestSeller card", "category": "bestsellers" },
+    { "id": 2, "url": "/images/2.webp", "alt": "Templates card", "category": "templates" },
+    { "id": 3, "url": "/images/3.webp", "alt": "For home card", "category": "for home" },
+    { "id": 4, "url": "/images/4.webp", "alt": "Our pick card", "category": "our pick" }
+  ],
+  
   "KEYWORDS": [
     {
       "category": "decoration",
@@ -21,7 +29,7 @@
     {
       "category": "template",
       "items": [
-        "card"
+        "card", "category"
       ]
     }
 
@@ -35,7 +43,7 @@
         "price": 32.00,
         "discountPercentage": "",
         "stock": 30,
-        "category": ["decoration", "for home"],
+        "category": ["bestsellers", "for home"],
         "thumbnail": "...",
         "images": "https://white-linen-theme.myshopify.com/cdn/shop/products/16.jpg?v=1656002863&width=2048"
       },
@@ -46,7 +54,7 @@
         "price": 22.00,
         "discountPercentage": "",
         "stock": 10,
-        "category": ["decoration", "for home"],
+        "category": ["bestsellers", "for home"],
         "thumbnail": "...",
         "images": "https://white-linen-theme.myshopify.com/cdn/shop/products/11.jpg?v=1656002542&width=2048"
      },
@@ -57,7 +65,7 @@
       "price": 39.00,
       "discountPercentage": "",
       "stock": 30,
-      "category": ["decoration", "for home"],
+      "category": ["bestsellers", "for home"],
       "thumbnail": "...",
       "images": "https://white-linen-theme.myshopify.com/cdn/shop/products/8.jpg?v=1656002497&width=2048"
    },
@@ -79,7 +87,7 @@
       "price": 32.00,
       "discountPercentage": 26.00,
       "stock": 10,
-      "category": "template",
+      "category": "templates",
       "thumbnail": "...",
       "images": "https://white-linen-theme.myshopify.com/cdn/shop/products/9.jpg?v=1656002408&width=2048"
     },
@@ -90,7 +98,7 @@
       "price": 6.00,
       "discountPercentage": "",
       "stock": 80,
-      "category": "template",
+      "category": "templates",
       "thumbnail": "...",
       "images": "https://white-linen-theme.myshopify.com/cdn/shop/products/5.jpg?v=1656002480&width=2048"
     },
@@ -101,7 +109,7 @@
       "price": 45.00,
       "discountPercentage": "",
       "stock": 30,
-      "category": "template",
+      "category": "templates",
       "thumbnail": "...",
       "images": "https://white-linen-theme.myshopify.com/cdn/shop/products/1.jpg?v=1656002279&width=2048"
     },
@@ -113,7 +121,7 @@
       "price": 8.00,
       "discountPercentage": "",
       "stock": 30,
-      "category": ["decoration", "for home"],
+      "category": ["bestsellers", "for home"],
       "thumbnail": "...",
       "images": "https://white-linen-theme.myshopify.com/cdn/shop/products/SquareProductPhotoTemplate.jpg?v=1656002981&width=2048"
     },
@@ -124,7 +132,7 @@
       "price": 21.00,
       "discountPercentage": "",
       "stock": 60,
-      "category": ["decoration", "for home"],
+      "category": ["bestsellers", "for home"],
       "thumbnail": "...",
       "images": "https://white-linen-theme.myshopify.com/cdn/shop/products/15.jpg?v=1656002740&width=2048"
     },
@@ -135,7 +143,7 @@
       "price": 45.00,
       "discountPercentage": "",
       "stock": 60,
-      "category": ["decoration", "for home"],
+      "category": ["bestsellers", "for home"],
       "thumbnail": "...",
       "images": "https://white-linen-theme.myshopify.com/cdn/shop/products/14.jpg?v=1656002702&width=2048"
     },
@@ -146,7 +154,7 @@
       "price": 120.00,
       "discountPercentage": "",
       "stock": 60,
-      "category": ["decoration", "for home"],
+      "category": ["bestsellers", "for home"],
       "thumbnail": "...",
       "images": "https://white-linen-theme.myshopify.com/cdn/shop/products/13.jpg?v=1656002662&width=2048"
     },
@@ -157,7 +165,7 @@
       "price": 57.00,
       "discountPercentage": "",
       "stock": 60,
-      "category": ["decoration", "for home"],
+      "category": ["bestsellers", "for home"],
       "thumbnail": "...",
       "images": "https://white-linen-theme.myshopify.com/cdn/shop/products/12.jpg?v=1656002619&width=2048"
     },
@@ -168,18 +176,18 @@
       "price": 50.00,
       "discountPercentage": "",
       "stock": 60,
-      "category": ["decoration", "for home"],
+      "category": ["bestsellers", "for home"],
       "thumbnail": "...",
       "images": "https://white-linen-theme.myshopify.com/cdn/shop/products/7.jpg?v=1656002332&width=2048"
     },
     {
       "id": 14,
-      "title": "ebook template",
+      "title": "ebook templates",
       "description": "...",
       "price": 16.00,
       "discountPercentage": "",
       "stock": 60,
-      "category": "template",
+      "category": "templates",
       "thumbnail": "...",
       "images": "https://white-linen-theme.myshopify.com/cdn/shop/products/6.jpg?v=1656001983&width=2048"
     },
@@ -190,35 +198,46 @@
       "price": 12.00,
       "discountPercentage": "",
       "stock": 60,
-      "category": "template",
+      "category": "templates",
       "thumbnail": "...",
       "images": "https://white-linen-theme.myshopify.com/cdn/shop/products/4.jpg?v=1656001888&width=2048"
     },
     {
       "id": 16,
-      "title": "email template",
+      "title": "email templates",
       "description": "...",
       "price": 20.00,
       "discountPercentage": "",
       "stock": 60,
-      "category": "template",
+      "category": "templates",
       "thumbnail": "...",
       "images": "https://white-linen-theme.myshopify.com/cdn/shop/products/2.jpg?v=1656002030&width=2048"
     },
     {
       "id": 17,
-      "title": "social media post template",
+      "title": "social media post templates",
       "description": "...",
       "price": 10.00,
       "discountPercentage": "",
       "stock": 60,
-      "category": "template",
+      "category": "templates",
+      "thumbnail": "...",
+      "images": "https://white-linen-theme.myshopify.com/cdn/shop/products/3.jpg?v=1656002454&width=2048"
+    },
+    {
+      "id": 18,
+      "title": "social media post templates",
+      "description": "...",
+      "price": 10.00,
+      "discountPercentage": "",
+      "stock": 60,
+      "category": "bestsellers",
       "thumbnail": "...",
       "images": "https://white-linen-theme.myshopify.com/cdn/shop/products/3.jpg?v=1656002454&width=2048"
     }
     ],
   
-    "total": 17,
+    "total": 18,
     "skip": 0,
     "limit": 30
   }

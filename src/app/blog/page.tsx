@@ -1,28 +1,33 @@
 import BlogPageStyle from "@/styles/blogpage/blogpage.module.css";
-import Form from "@/styles/newsletter-subheading.module.css";
-import Input from "@/styles/newsletter-subheading.module.css";
-import BtnStyle from "@/styles/newsletter-subheading.module.css";
+import NewsletterFormStyle from "@/styles/newsletter-subheading.module.css";
 
+import Link from "next/link";
 import Image from "next/image";
 import NewsletterForm from "@/components/NewsletterForm";
 import CardBlog from "@/components/blogpage/CardBlog";
 import News from "@/api/news.json";
-import Link from "next/link";
-import ArticleSlider from "@/components/blogpage/ArticleSlider";
 
 const news = News.NEWS;
 
+function getNews() {
+  return news;
+}
+
 export default function BlogPage() {
+  const news = getNews();
+
   return (
     <main>
       <section className={BlogPageStyle["banner__section"]}>
-        <Image
-          src="/images/blog/Blog_Page_Header_Bannernew.webp"
-          alt="Blog banner"
-          width={1000}
-          height={1000}
-          className={BlogPageStyle["banner-img"]}
-        />
+        <Link href="/blog#article">
+          <Image
+            src="/images/blog/Blog_Page_Header_Bannernew.webp"
+            alt="Blog banner"
+            width={1000}
+            height={1000}
+            className={BlogPageStyle["banner-img"]}
+          />
+        </Link>
       </section>
 
       <section className={BlogPageStyle["subscribe__section"]}>
@@ -36,46 +41,57 @@ export default function BlogPage() {
             </p>
           </div>
           <NewsletterForm
-            formClassName={Form["form-newsletter"]}
-            inputClassName={Input["newsletter-input"]}
-            btnClassName={BtnStyle["newsletter-btn"]}
+            formClassName={NewsletterFormStyle["form-newsletter"]}
+            inputClassName={NewsletterFormStyle["newsletter-input"]}
+            btnClassName={NewsletterFormStyle["newsletter-btn"]}
           />
         </div>
       </section>
 
-      <section className={BlogPageStyle["article__section"]}>
+      <section
+        id="article"
+        className={BlogPageStyle["article__section"]}
+        style={{ margin: "0, auto" }}
+      >
         <div>
           <div className={BlogPageStyle["article__card"]}>
             <ul className={BlogPageStyle["article__card--list"]}>
-              {news.map((item) => (
-                <li
-                  key={item.id}
-                  className={BlogPageStyle["article__card--list-item"]}
-                >
-                  <Link href="/">
-                    <CardBlog
-                      src={item.imagesUrl}
-                      alt={item.title}
-                      title={item.title}
-                      date={item.date}
-                      content={item.content}
-                      classNameDetail={BlogPageStyle["card-blog__detail"]}
-                      classNameDetailImg={
-                        BlogPageStyle["card-blog__detail--img"]
-                      }
-                      classNameCardBlogImg={BlogPageStyle["card-blog--img"]}
-                      classNameDetailInfo={
-                        BlogPageStyle["card-blog__detail-info"]
-                      }
-                      classNameContent={
-                        BlogPageStyle["card-blog__detail--content"]
-                      }
-                      classNameDate={BlogPageStyle["card-blog__detail--date"]}
-                      classNameTitle={BlogPageStyle["card-blog__detail--title"]}
-                    />
-                  </Link>
-                </li>
-              ))}
+              {news.length > 0 &&
+                news.map((blog) => (
+                  <li
+                    key={blog.id}
+                    className={BlogPageStyle["article__card--list-item"]}
+                  >
+                    <Link
+                      href={`/blog/${blog.title
+                        .toLocaleLowerCase()
+                        .replace(/\s+/g, "-")}`}
+                    >
+                      <CardBlog
+                        src={blog.imagesUrl}
+                        alt={blog.title}
+                        title={blog.title}
+                        date={blog.date}
+                        content={blog.content}
+                        classNameDetail={BlogPageStyle["card-blog__detail"]}
+                        classNameDetailImg={
+                          BlogPageStyle["card-blog__detail--img"]
+                        }
+                        classNameCardBlogImg={BlogPageStyle["card-blog--img"]}
+                        classNameDetailInfo={
+                          BlogPageStyle["card-blog__detail-info"]
+                        }
+                        classNameContent={
+                          BlogPageStyle["card-blog__detail--content"]
+                        }
+                        classNameDate={BlogPageStyle["card-blog__detail--date"]}
+                        classNameTitle={
+                          BlogPageStyle["card-blog__detail--title"]
+                        }
+                      />
+                    </Link>
+                  </li>
+                ))}
             </ul>
           </div>
         </div>

@@ -1,46 +1,55 @@
 "use client";
 import SocialIcon from "./SocialIcon";
-import ListStyle from "@/styles/nav-menu-toggle.module.css";
-import ItemStyle from "@/styles/nav-menu-toggle.module.css";
-import MenuToggleStyle from "@/styles/nav-menu-toggle.module.css";
-import MenutoggleBtnStyle from "@/styles/nav-menu-toggle.module.css";
+import NavMenuToggleStyle from "@/styles/nav-menu-toggle.module.css";
 import SocialIconStyle from "@/styles/social-icon.module.css";
-import SocialIconListStyle from "@/styles/social-icon.module.css";
-import SocialIconItemStyle from "@/styles/social-icon.module.css";
 import { IoIosClose, IoIosMenu } from "react-icons/io";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import NavbarToggle from "./NavbarToggle";
 import { FaRegUser } from "react-icons/fa";
 
 export default function MenuToggle() {
   const [toggle, setToggle] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null)
+  
+  useEffect(() => {
+    const handlerCloseWindow = (event: MouseEvent) => {
+      if (!menuRef.current?.contains(event.target as Node)) {
+        setToggle(false)
+      }
+    }
+    document.addEventListener("mousedown", handlerCloseWindow);
+    return () => {
+      document.removeEventListener("mousedown", handlerCloseWindow)
+    }
+  }, [menuRef])
+
   return (
-    <div className={MenuToggleStyle["menu-toggle-mobile"]}>
+    <div className={NavMenuToggleStyle["menu-toggle-mobile"]} ref={menuRef}>
       <button
-        className={MenutoggleBtnStyle["menu-btn"]}
+        className={NavMenuToggleStyle["menu-btn"]}
         onClick={() => setToggle(!toggle)}
       >
         {toggle ? <IoIosClose /> : <IoIosMenu />}
       </button>
       {toggle && (
-        <div className={MenuToggleStyle["menu-toggle-mobile-detail"]}>
+        <div className={NavMenuToggleStyle["menu-toggle-mobile-detail"]}>
           <h2>Menu</h2>
           <NavbarToggle
-            navList={ListStyle["nav__list"]}
-            navItem={ItemStyle["nav__list--item"]}
+            navList={NavMenuToggleStyle["nav__list"]}
+            navItem={NavMenuToggleStyle["nav__list--item"]}
           />
-          <div className={MenuToggleStyle['user']}>
+          <div className={NavMenuToggleStyle['user']}>
             <span>
-              <FaRegUser className={MenuToggleStyle["user--icon"]} />
+              <FaRegUser className={NavMenuToggleStyle["user--icon"]} />
             </span>{" "}
-            <span className={MenuToggleStyle["user--login"]}>Login</span>
+            <span className={NavMenuToggleStyle["user--login"]}>Login</span>
             <SocialIcon
               socialIcon={SocialIconStyle["menu-toggle__social__icon"]}
               socialIconList={
-                SocialIconListStyle["menu-toggle__social__icon-list"]
+                SocialIconStyle["menu-toggle__social__icon-list"]
               }
               socialIconItem={
-                SocialIconItemStyle["menu-toggle__social__icon-item"]
+                SocialIconStyle["menu-toggle__social__icon-item"]
               }
             />
           </div>
