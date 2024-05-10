@@ -1,8 +1,6 @@
 import { BiShoppingBag } from "react-icons/bi";
 import SocialIcon from "./SocialIcon";
 import SocialIconStyle from "@/styles/social-icon.module.css";
-import SocialIconListStyle from "@/styles/social-icon.module.css";
-import SocialIconItemStyle from "@/styles/social-icon.module.css";
 import Logo from "./Logo";
 import MenuToggle from "./MenuToggle";
 import logoStyle from "@/styles/logo.module.css";
@@ -16,7 +14,7 @@ export default function Header() {
   return (
     <header>
       <SliderAnnouncement />
-      <div className={HeaderStyle["header"]}>
+      <div className={HeaderStyle["header"]} style={{position:'relative'}}>
         <MenuToggle />
         <div className="header">
           <SearchOpenField />
@@ -24,8 +22,8 @@ export default function Header() {
           <div className="header_icons">
             <SocialIcon
               socialIcon={SocialIconStyle["header__social__icon"]}
-              socialIconList={SocialIconListStyle["header__social__icon-list"]}
-              socialIconItem={SocialIconItemStyle["header__social__icon-item"]}
+              socialIconList={SocialIconStyle["header__social__icon-list"]}
+              socialIconItem={SocialIconStyle["header__social__icon-item"]}
             />
             <BiShoppingBag className={HeaderStyle['shopping--cart']} />
             <FaRegUser className={HeaderStyle['user']}/>

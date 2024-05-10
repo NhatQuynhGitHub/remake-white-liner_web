@@ -89,7 +89,7 @@
 .card-blog__detail-info {
     width: 80%;
     margin: 0 auto;
-    height: 220px;
+    height: auto;
 }
 .card-blog__detail--date {
     margin: 5px 0 0;

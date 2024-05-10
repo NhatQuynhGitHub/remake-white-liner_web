@@ -31,7 +31,7 @@ export default function SliderAnnouncement() {
   let announcements = Announcements[index];
 
   return (
-    <div className={AnnouncementStyle["announcement"]}>
+    <div className={AnnouncementStyle["announcement"]} style={{position:"relative"}}>
       <button
         className={AnnouncementStyle["control-btn"]}
         onClick={handlePrevAnnouncement}

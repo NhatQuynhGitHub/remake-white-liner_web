@@ -12,6 +12,7 @@
     --color-foreground: 113, 113, 113;
 
     --font--size-title: 1.5rem
+    --speed: 500ms
     
 }
 
@@ -60,12 +61,12 @@ a:hover {
     font-weight: 700;
     color: var(--text-quaternary-color);
 }
-.active-menu-toggle__shop {
+.active-menu-toggle__shop, .active__dropdown-nav-menu {
     display: block;
     transform: translateY(0);
     transition: 2s ease;
 }
-.inactive-menu-toggle__shop {
+.inactive-menu-toggle__shop, .inactive__dropdown-nav-menu {
     display: none;
     transform: translateY(90);
     transition: 2s ease
@@ -74,9 +75,27 @@ a:hover {
 
 
 /* RESPONSIVE */
+
+@media (max-width: 989px ) {
+    .active__menu-modal {
+        visibility: visible;
+        background-color: rgba(99, 98, 98, 0.5);
+        position: fixed;
+        z-index: -3;
+        top: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+}
+
+
 @media (min-width: 768px) {
     .social__icon {
         display: none;
+    }
+    .inactive__menu-modal {
+        visibility: hidden;
     }
 }
 
