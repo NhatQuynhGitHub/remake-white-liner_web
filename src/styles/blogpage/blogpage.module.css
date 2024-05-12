@@ -89,7 +89,7 @@
 .card-blog__detail-info {
     width: 80%;
     margin: 0 auto;
-    height: auto;
+    height: 220px;
 }
 .card-blog__detail--date {
     margin: 5px 0 0;
@@ -117,5 +117,10 @@
 @media (max-width: 768px) {
     .article__card {
         margin: 60px 15px;
+    }
+
+    .card-blog__detail-info {
+
+        height: auto;
     }
 }

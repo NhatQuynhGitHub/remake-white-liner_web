@@ -1,5 +1,4 @@
 import Link from "next/link";
-import AboutUs from "@/components/about/AboutUs";
 import Comment from "@/components/homepage component/Comment";
 import Image from "next/image";
 import ShopPick from "@/components/homepage component/ShopPick";

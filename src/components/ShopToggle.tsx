@@ -43,7 +43,7 @@ export default function ShopToggle({shopMenuStyle, shopBtnStyle, shopBackBtnStyl
                     <ShopMenuDetail
                         shopList={ListStyle['shop__list']}
                         shopItem={ItemStyle['shop__list--item']}
-                    
+                        onClick={() => setShowMenu(false)}
                     />
                 </div>
             }
