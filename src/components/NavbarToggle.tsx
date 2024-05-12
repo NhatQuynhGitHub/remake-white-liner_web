@@ -3,8 +3,7 @@ import Link from "next/link";
 import ShopDropDownMenuStyle from "@/styles/nav-menu-toggle.module.css";
 import { usePathname } from "next/navigation";
 import ShopMenuDetail from "./ShopMenuDetail";
-import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 interface NavbarTogglerProps {
   navList?: string;
@@ -18,22 +17,7 @@ export default function NavbarToggle({
 }: NavbarTogglerProps) {
   const [controlOpen, setControlOpen] = useState(false);
   const pathname = usePathname();
-  // const router = useRouter();
-
-  // console.log("before:", controlOpen);
-
-  // function closeMenuWindow() {
-  //   // console.log("Before setting to false:", controlOpen);
-
-  //     router.push("/")
-  //     setControlOpen(false);
-
-  //     console.log("aaaa:",)
-
-  // }
-  // useEffect(() => {
-  //   console.log("Updated value of controlOpen:", controlOpen);
-  // }, [controlOpen]);
+ 
 
   return (
     <>
@@ -78,7 +62,7 @@ export default function NavbarToggle({
               >
                 Shop ←{" "}
               </span>
-              <ShopMenuDetail />
+              <ShopMenuDetail  onClick={handleCloseMenu}/>
             </div>
           </li>
           <li className={navItem}>

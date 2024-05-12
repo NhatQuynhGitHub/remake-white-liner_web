@@ -17,6 +17,7 @@ import Link from "next/link";
 import CardBlog from "@/components/blogpage/CardBlog";
 import ArticleSlider from "@/components/blogpage/ArticleSlider";
 import InstagramFeed from "@/components/homepage component/InstagramFeed";
+import Btn from "@/components/Btn";
 
 const news = News.NEWS;
 const collectionsCard = CollectionsCard.COLLECTIONS;
@@ -29,10 +30,10 @@ export default function Home() {
         <main>
           <section className={HomeStyle["container"]}>
             <div className={HomeStyle["greeting__content"]}>
-              <h3 className={HomeStyle["greeting__content-title"]}>
+              <h3 className={HomeStyle["section--title"]}>
                 Welcome to white linen
               </h3>
-              <p>
+              <p className={HomeStyle["section--content"]}>
                 Share information about your brand with your customers. Describe
                 a product, make announcements, or welcome customers to your
                 store.
@@ -89,18 +90,29 @@ export default function Home() {
           </section>
 
           <section className={ShopPickStyle["shop"]}>
-            <div className={HomeStyle["container"]}>
-              <ShopPick />
+            <div className={ShopPickStyle["shop-info"]}>
+              <h3 className={HomeStyle["section--title"]}>Shop our picks</h3>
+              <p className={HomeStyle["section--content"]}>
+                Share information about your brand with your customers. Describe
+                a product, make announcements, or welcome customers to your
+                store.
+              </p>
             </div>
+            <div className={HomeStyle["container"]}>
+              <ShopPick quantityOfProducts={6} />
+            </div>
+            <Link href="/collections/bestsellers">
+              <Btn btn="View all" />
+            </Link>
           </section>
 
           <section className={HomeStyle["container"]}>
             <div className={HomeStyle["sign-up"]}>
               <div>
-                <h3 className={HomeStyle["sign-up--title"]}>
+                <h3 className={HomeStyle["section--title"]}>
                   Join the list, get 10% off your first purchase!
                 </h3>
-                <p>
+                <p className={HomeStyle["section--content"]}>
                   Plus, be the first to know about new collections and exclusive
                   offers. <i>We never spam. Unsubscribe anytime.</i>
                 </p>

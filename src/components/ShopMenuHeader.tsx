@@ -19,14 +19,14 @@ export default function ShopMenuHeader({
 
   useEffect(() => {
     const handlerClose = (event: MouseEvent) => {
-        if (!menuRef.current?.contains(event.target as Node)) {
-            setShowMenu(false);
-        }
-    }
+      if (!menuRef.current?.contains(event.target as Node)) {
+        setShowMenu(false);
+      }
+    };
     document.addEventListener("mousedown", handlerClose);
     return () => {
-        document.removeEventListener("mousedown", handlerClose)
-    }
+      document.removeEventListener("mousedown", handlerClose);
+    };
   }, [menuRef]);
 
   return (
@@ -37,7 +37,6 @@ export default function ShopMenuHeader({
           setShowMenu(!showMenu);
         }}
         className={shopBtnStyle}
-        
       >
         <div className={`link ${showMenu ? "active" : ""}`}>
           <span style={{ textTransform: "uppercase" }}>Shop</span>
@@ -47,6 +46,7 @@ export default function ShopMenuHeader({
       {showMenu && (
         <div>
           <ShopMenuDetail
+            onClick={() => setShowMenu(false)}
             shopList={ListStyle["shop__list"]}
             shopItem={ItemStyle["shop__list--item"]}
           />

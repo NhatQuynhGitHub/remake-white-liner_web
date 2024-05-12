@@ -3,14 +3,18 @@
     margin: 0 auto
 }
 
+.section--title {
+    text-transform: uppercase;
+    font-size: var(--font--size-title);
+
+    
+}
+
 .greeting__content {
     text-align: center;
     margin: 30px auto 50px;
 }
-.greeting__content-title {
-    text-transform: uppercase;
-    font-size: var(--font--size-title);
-}
+
 
 .shop__banner-img {
     width: 100%;
@@ -26,11 +30,6 @@
     margin-top: 70px;
 }
 
-.sign-up--title {
-    font-size: var(--font--size-title);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
 
 /* COMMENT */
 .comment--section {

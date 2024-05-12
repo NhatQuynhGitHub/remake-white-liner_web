@@ -1,0 +1,87 @@
+.container {
+    width: 80%;
+    margin: 0 auto
+}
+.btn button{
+    margin: 40px auto;
+    
+}
+.section--content {
+    text-align: center;
+    margin: 50px auto;
+}
+.section--title {
+    font-size: var(--font--size-title);
+    text-transform: uppercase;
+}
+
+
+.img--banner {
+    width: 100%;
+    height: auto;
+}
+
+
+.section__about-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section__about-us--content {
+    width: 100%;
+    max-width: 700px;
+}
+
+.section__service {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+.section__service--img {
+    width: 50%;
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+.img--service {
+    width: 100%;
+    height: auto;
+}
+.section__service--detail {
+    width: 50%;
+    text-align: left;
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+.instagram--banner-img {
+    width: 100%;
+    height: auto;
+}
+ .instagram--banner-img-mobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+    .instagram--banner-img {
+        display: none;
+    }
+    .instagram--banner-img-mobile {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .section__service {
+        flex-direction: column;
+    }
+    .section__service--img {
+        width: 100%;
+    }
+    .section__service--detail {
+        width: 100%;
+        text-align: center;
+    }
+}

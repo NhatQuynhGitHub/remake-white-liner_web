@@ -9,13 +9,7 @@
 .shop-pick {
     margin: 0 90px;
 }
-.shop-info {
-    margin-bottom: 50px;
-}
-.shop-info h3 {
-    font-size: var(--font--size-title);
-    text-transform: uppercase;
-}
+
 .shop__products {
     background-color: #fff;
     padding: 30px;
@@ -34,11 +28,23 @@
 }
 
 /* RESPONSIVE */
-@media (max-width: 768px) {
 
+@media (max-width: 989px) {
+
+    
     .shop-pick {
         margin: 0;
     }
+
+    .shop__products {
+        padding: 30px 0;
+    }
+    .product-card__list {
+        justify-content: space-evenly;
+    }
+}
+@media (max-width: 768px) {
+
     .shop__products {
         display: flex;
     }

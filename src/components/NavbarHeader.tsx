@@ -22,16 +22,16 @@ export default function NavbarHeader() {
           />
         </li>
         <li className={NavBarHeaderStyle["nav__list--item"]}>
-          <Link className={`link ${pathname === '/about' ? 'active' : ''}`} href="/">About</Link>
+          <Link className={`link ${pathname === '/about' ? 'active' : ''}`} href="/about">About</Link>
         </li>
         <li className={NavBarHeaderStyle["nav__list--item"]}>
           <Link className={`link ${pathname === '/blog' ? 'active' : ''}`} href="/blog">Blog</Link>
         </li>
         <li className={NavBarHeaderStyle["nav__list--item"]}>
-          <Link className={`link ${pathname === '/faq' ? 'active' : ''}`} href="/">FAQ</Link>
+          <Link className={`link ${pathname === '/faq' ? 'active' : ''}`} href="/faq">FAQ</Link>
         </li>
         <li className={NavBarHeaderStyle["nav__list--item"]}>
-          <Link className={`link ${pathname === '/contact' ? 'active' : ''}`} href="/">Contact</Link>
+          <Link className={`link ${pathname === '/contact' ? 'active' : ''}`} href="/contact">Contact</Link>
         </li>
       </ul>
     </>

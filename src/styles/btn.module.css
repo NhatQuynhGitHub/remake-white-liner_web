@@ -1,7 +1,17 @@
 .btn-primary {
+    font-size: var(--font--size-btn);
     border: none;
-    background-color: var(--text--color);
+    background-color: var(--text-quaternary-color);
     color: #fff;
     text-transform: uppercase;
-    padding: 12px 40px;
+    height: 40px;
+    padding: 10px 40px;
+    letter-spacing: var(--font-letter-spacing);
+    transition: 
+        background-color var(--speed) ease
+    ;
+}
+
+.btn-primary:hover {
+    background-color: var(--text-secondary-color);
 }
