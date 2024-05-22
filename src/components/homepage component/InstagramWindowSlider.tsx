@@ -4,6 +4,7 @@ import Image from "next/image";
 import { FaInstagram } from "react-icons/fa";
 import { IoIosClose } from "react-icons/io";
 import { RxChevronLeft, RxChevronRight } from "react-icons/rx";
+import { useEffect, useRef } from "react";
 
 interface InstagramWindowSliderProps {
   InstagramBoxes: any;
@@ -20,9 +21,23 @@ export default function InstagramWindowSlider({
   onNextBox,
   onPrevBox,
 }: InstagramWindowSliderProps) {
+
+  const refModal = useRef<HTMLDivElement>(null)
+  
+  useEffect(() => {
+    const handleCloseWindowModal = (event: MouseEvent) => {
+      if (!refModal.current?.contains(event.target as Node)) {
+        handleCloseWindow()
+        }
+      };
+      document.addEventListener("mousedown", handleCloseWindow);
+      return () => {
+        document.removeEventListener("mousedown", handleCloseWindow)
+      }
+    }, [handleCloseWindow])
   return (
     <div>
-      <div className={InstagramFeedStyle["modal-behind_instagram__window"]}>
+      <div className={InstagramFeedStyle["modal-behind_instagram__window"]} ref={refModal}>
         <div className={InstagramFeedStyle["instagram__window"]}>
           <ul
             className={InstagramFeedStyle["instagram__window__list"]}

@@ -9,8 +9,6 @@ import logoStyle from "@/styles/logo.module.css";
 import FooterStyle from "@/styles/footer-style.module.css";
 import LineDivideStyle from "@/styles/footer-style.module.css";
 import SocialIconStyle from "@/styles/social-icon.module.css";
-import SocialIconListStyle from "@/styles/social-icon.module.css";
-import SocialIconItemStyle from "@/styles/social-icon.module.css";
 import FooterCopyright from "./FooterCopyright";
 
 export default function Footer() {
@@ -22,8 +20,8 @@ export default function Footer() {
           <hr className={LineDivideStyle["line-divide"]} />
           <SocialIcon
             socialIcon={SocialIconStyle["footer__social__icon"]}
-            socialIconList={SocialIconListStyle["footer__social__icon-list"]}
-            socialIconItem={SocialIconItemStyle["footer__social__icon-item"]}
+            socialIconList={SocialIconStyle["footer__social__icon-list"]}
+            socialIconItem={SocialIconStyle["footer__social__icon-item"]}
           />
         </div>
         <QuickLink />

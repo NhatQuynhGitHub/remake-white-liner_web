@@ -1,0 +1,36 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.shop--section {
+    margin: 0 auto;
+}
+
+.shop__page--banner {
+    background-image: url("./../../../public/images/collection-banner-page.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px 10px;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-size: 2.2rem;
+}
+
+.shop__card-product--list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    margin: 80px auto;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .shop__card-product--list {
+        flex-direction: column;
+    }
+}

@@ -12,6 +12,17 @@
     ;
 }
 
+.btn-secondary {
+    all: unset;
+    font-size: var(--font--size-btn);
+    letter-spacing: var(--font-letter-spacing);
+}
+
 .btn-primary:hover {
     background-color: var(--text-secondary-color);
+}
+
+.btn-secondary a:hover {
+    color: var(--text-primary-color);
+    text-decoration: none;
 }

@@ -12,26 +12,48 @@ export default function ShopMenuDetail({
   shopItem,
   onClick,
 }: ShopMenuDetailProps) {
-    const pathname = usePathname()
+  const pathname = usePathname();
   return (
     <ul className={shopList}>
       <li onClick={onClick} className={shopItem}>
-        <Link className={`link ${pathname === "/collections/bestsellers" ? "active" : ""}`} style={{ paddingTop: "10px" }} href="/collections/bestsellers">
+        <Link
+          className={`link ${
+            pathname === "/collections/bestsellers" ? "active" : ""
+          }`}
+          style={{ paddingTop: "10px" }}
+          href="/collections/bestsellers"
+        >
           Bestsellers
         </Link>
       </li>
       <li onClick={onClick} className={shopItem}>
-        <Link className={`link ${pathname === "/collections/templates" ? "active" : ""}`} style={{ paddingTop: "10px" }} href="/collections/templates">
+        <Link
+          className={`link ${
+            pathname === "/collections/templates" ? "active" : ""
+          }`}
+          style={{ paddingTop: "10px" }}
+          href="/collections/templates"
+        >
           Template
         </Link>
       </li>
       <li onClick={onClick} className={shopItem}>
-        <Link className={`link ${pathname === "/collections/for-home" ? "active" : ""}`} style={{ paddingTop: "10px" }} href="/collections/for-home">
+        <Link
+          className={`link ${
+            pathname === "/collections/for-home" ? "active" : ""
+          }`}
+          style={{ paddingTop: "10px" }}
+          href="/collections/for-home"
+        >
           For home
         </Link>
       </li>
       <li onClick={onClick} className={shopItem}>
-        <Link className={`link ${pathname === "/collections" ? "active" : ""}`} style={{ paddingTop: "10px" }} href="/collections">
+        <Link
+          className={`link ${pathname === "/collections" ? "active" : ""}`}
+          style={{ paddingTop: "10px" }}
+          href="/collections"
+        >
           Browser all collections
         </Link>
       </li>

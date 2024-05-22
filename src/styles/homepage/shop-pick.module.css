@@ -47,6 +47,8 @@
 
     .shop__products {
         display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     .product-card__list {
         flex-direction: column;

@@ -1,0 +1,35 @@
+{
+    "QUESTIONS1": [
+        {
+            "id": 1,
+            "category": "pricing",
+            "question": "do you offer discount for bulk purchase?",
+            "answer": "Papeterie rideaux arbre en fleurs mode voyage plume hiver, travail cher automne souvent manteau champagne timbre diamants rose dentelle musique citation vent fontaine, montre bonne velours fabuleux ballet merveilles parapluie chocolat floraison doux froid charmant. "
+        },
+        {
+            "id": 2,
+            "category": "returns",
+            "question": "what is your Return Policy?",
+            "answer": "Papeterie rideaux arbre en fleurs mode voyage plume hiver, travail cher automne souvent manteau champagne timbre diamants rose dentelle musique citation vent fontaine, montre bonne velours fabuleux ballet merveilles parapluie chocolat floraison doux froid charmant. ..."
+        },
+        {
+            "id": 3,
+            "category": "shipping",
+            "question": "can I get free shipping over a certain purchase amount?",
+            "answer": "Papeterie rideaux arbre en fleurs mode voyage plume hiver, travail cher automne souvent manteau champagne timbre diamants rose dentelle musique citation vent fontaine, montre bonne velours fabuleux ballet merveilles parapluie chocolat floraison doux froid charmant. "
+        },
+        {
+            "id": 4,
+            "category": "shipping",
+            "question": "how long does international shipping take?",
+            "answer": "Papeterie rideaux arbre en fleurs mode voyage plume hiver, travail cher automne souvent manteau champagne timbre diamants rose dentelle musique citation vent fontaine, montre bonne velours fabuleux ballet merveilles parapluie chocolat floraison doux froid charmant. "
+        },
+        {
+            "id": 5,
+            "category": "shipping",
+            "question": "what can I do if my item gets lost in the shiping process?",
+            "answer": "Papeterie rideaux arbre en fleurs mode voyage plume hiver, travail cher automne souvent manteau champagne timbre diamants rose dentelle musique citation vent fontaine, montre bonne velours fabuleux ballet merveilles parapluie chocolat floraison doux froid charmant. "
+        }
+    ]
+    
+}

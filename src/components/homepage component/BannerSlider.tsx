@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import BannerStyle from "./../../styles/homepage/hero-banner.module.css";
 import { FaChevronLeft, FaChevronRight, FaCircle } from "react-icons/fa";
@@ -11,7 +11,32 @@ interface HeroProps {
 export default function BannerSlider({ banners }: HeroProps) {
   const [bannerIndex, setBannerIndex] = useState(0);
 
-  
+  function schedule() {
+    console.log("1");
+    wait(10 * 1000).then(() => {
+      console.log("2");
+    });
+  }
+
+  function changeSlideAuto() {
+    setInterval(() => {
+      handlePrevBanner();
+    }, 5 * 1000);
+  }
+
+  useEffect(() => {
+    schedule();
+    changeSlideAuto();
+  }, );
+
+  function wait(seconds: number) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve("time up");
+      }, seconds);
+    });
+  }
+
   function handleNextBanner() {
     setBannerIndex((index) => {
       if (index === banners.length - 1) {
@@ -20,7 +45,7 @@ export default function BannerSlider({ banners }: HeroProps) {
       return index + 1;
     });
   }
-  
+
   function handlePrevBanner() {
     setBannerIndex((index) => {
       if (index === 0) {
@@ -29,7 +54,7 @@ export default function BannerSlider({ banners }: HeroProps) {
       return index - 1;
     });
   }
-  console.log("aaa:",banners )
+  console.log("aaa:", banners);
 
   return (
     <div className={BannerStyle["banner"]}>

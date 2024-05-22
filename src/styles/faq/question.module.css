@@ -1,0 +1,39 @@
+.section--title {
+    font-size: var(--font--size-title);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.section--question {
+    margin: 20px auto;
+}
+.detail--question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e2dfdf;
+    padding: 0 20px;
+    cursor: pointer;
+}
+.detail--question:hover {
+    background-color: var(--text-tertiary-color);
+}
+.question {
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 1rem;
+    margin: 20px 0;
+}
+
+.btn--expand {
+    all: unset;
+}
+
+.detail--answer {
+    background-color: #f3f1f1;
+    padding: 30px 20px;
+}
+
+.detail--answer p {
+    margin: 0;
+}
