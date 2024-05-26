@@ -62,7 +62,8 @@
     }
 
    .shop__card-product--list {
-        grid-template-columns: auto auto;
+        display: flex;
+        flex-direction: column;
     }
     .shop__card-product--list {
         margin: 10px auto;
