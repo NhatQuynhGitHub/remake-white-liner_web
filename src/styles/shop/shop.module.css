@@ -57,6 +57,10 @@
 /* RESPONSIVE */
 @media (max-width: 768px) {
 
+    .shop__page--banner {
+        font-size: 1.7rem;
+    }
+
    .shop__card-product--list {
         grid-template-columns: auto auto;
     }
