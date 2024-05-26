@@ -1,14 +1,5 @@
-.card {
-    /* max-width: 300px; */
-    width: 100%;
-    height: 470px;
-    /* border: 2px solid rebeccapurple; */
-    background-color: #f3f3f3;
-    text-align: center;
-    margin: 10px 0;
-}
-
-.card-img {
+/* CARD PRODUCT IN HOMEPAGE */
+.img-card {
     object-fit: cover;
     width: 100%;
     height: 350px;
@@ -28,14 +19,4 @@
 .card__info-price {
     font-size: 1.2rem;
     text-transform: uppercase;
-}
-
-@media (max-width: 768px) {
-    .card {
-        max-width: 100%;
-        width: 100%;
-        height: 470px;
-        background-color: #f3f3f3;
-        text-align: center;
-    }
 }

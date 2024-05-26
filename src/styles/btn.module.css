@@ -16,6 +16,9 @@
     all: unset;
     font-size: var(--font--size-btn);
     letter-spacing: var(--font-letter-spacing);
+    cursor: pointer;
+   
+    
 }
 
 .btn-primary:hover {

@@ -3,6 +3,8 @@ import Collections from "@/api/products.json";
 import Products from "@/api/products.json";
 import CardProduct from "@/components/CardProduct";
 import FacetProduct from "@/components/collection/FacetProduct";
+import CardProductItem from "@/components/CardProductItem";
+import Link from "next/link";
 
 const collections = Collections.COLLECTIONS;
 const products = Products.PRODUCTS;
@@ -18,9 +20,6 @@ export default function CollectionsCategory({
 }: {
   params: { category: string };
 }) {
-  
- 
-
   const product = products.filter((item) => {
     if (typeof item.category === "string") {
       return item.category === params.category.replace("-", " ");
@@ -39,9 +38,6 @@ export default function CollectionsCategory({
     return item.price > max ? item.price : max;
   }, 0);
 
-
-  
-
   return (
     <div>
       <section className={ShopStyle["shop__page--banner"]}>
@@ -58,12 +54,16 @@ export default function CollectionsCategory({
         <ul className={ShopStyle["shop__card-product--list"]}>
           {product.map((item) => (
             <li key={item.id} className={ShopStyle["shop__card-product--item"]}>
-              <CardProduct
-                src={item.images}
-                alt={item.title}
-                title={item.title}
-                price={item.price}
-              />
+              <Link href="#">
+                <CardProduct className={ShopStyle["card-product"]}>
+                  <CardProductItem
+                    src={item.images}
+                    alt={item.title}
+                    title={item.title}
+                    price={item.price}
+                  />
+                </CardProduct>
+              </Link>
             </li>
           ))}
         </ul>

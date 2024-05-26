@@ -28,7 +28,6 @@ export function RangePrice({
           max={highestPrice}
           //   value={rangePrice}
           onChange={onChangeHandle}
-          // placeholder={fieldLabel}
           className={ShopFilterStyle["price__range--input"]}
         />
 

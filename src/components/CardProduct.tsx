@@ -1,28 +1,12 @@
-import Image from "next/image"
-import CardProductStyle from '@/styles/card-product.module.css'
+import Image from "next/image";
+import CardProductStyle from "@/styles/card-product.module.css";
+import { Children } from "react";
 
 interface CardProductProps {
-    src: string, 
-    alt: any,  
-    title: any, 
-    price: any 
+  className: string;
+  children: React.ReactNode
 }
 
-export default function CardProduct({src, alt,  title, price } : CardProductProps){
-    return (
-        <div className={CardProductStyle['card']}>
-            <Image 
-                src={src}
-                alt={alt}
-                width={1000}
-                height={1000}
-                className={CardProductStyle['card-img']}
-
-            />
-            <div className={CardProductStyle['card__info']}>
-                <h4 className={CardProductStyle['card__info-title']}>{title}</h4>
-                <span className={CardProductStyle['card__info-price']}>${price} usa</span>
-            </div>
-        </div>
-    )
+export default function CardProduct({ className, children }: CardProductProps) {
+  return <div className={className}>{children}</div>;
 }

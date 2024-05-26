@@ -5,6 +5,7 @@ import ShopPickStyle from "@/styles/homepage/shop-pick.module.css";
 import DotStyle from "@/styles/homepage/hero-banner.module.css";
 import { useState } from "react";
 import { FaChevronLeft, FaChevronRight, FaCircle } from "react-icons/fa";
+import CardProductItem from "../CardProductItem";
 const products = Products.PRODUCTS;
 
 export default function ShopPickProductSlider() {
@@ -31,7 +32,7 @@ export default function ShopPickProductSlider() {
             key={product.id}
             className={ShopPickStyle["product-card--slider__item"]}
             >
-              <CardProduct
+              <CardProductItem
                 src={product.images}
                 alt={product.title}
                 title={product.title}

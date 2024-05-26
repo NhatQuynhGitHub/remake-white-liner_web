@@ -20,23 +20,36 @@ export function FilterPrice({
   onChangeMax,
 }: FilterPriceProps) {
   const [filterPrice, setFilterPrice] = useState(true);
-   const refClose = useRef<HTMLDivElement>(null);
+  const [isMobile, setIsMobile] = useState(false);
+  const refClose = useRef<HTMLDivElement>(null);
 
-   useEffect(() => {
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth > 989);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  });
+
+  useEffect(() => {
     const closeDropDownFilter = (event: MouseEvent) => {
       if (!refClose.current?.contains(event.target as Node)) {
-        setFilterPrice(true)
+        setFilterPrice(true);
       }
-    }; 
-    document.addEventListener("mousedown",closeDropDownFilter)
-    return () => {
-      document.removeEventListener("mousedown", closeDropDownFilter)
+    };
+    if (isMobile) {
+      document.addEventListener("mousedown", closeDropDownFilter);
     }
-   }, [refClose])
+    return () => {
+      document.removeEventListener("mousedown", closeDropDownFilter);
+    };
+  }, [isMobile,refClose]);
 
   return (
-    <div ref={refClose}>
-      <div >
+    <div ref={isMobile ? refClose : null}>
+      <div>
         <button
           onClick={() => setFilterPrice(!filterPrice)}
           className={`${ShopStyle["filter-state__price"]} ${ShopStyle["filter-state--dropdown-tab"]}`}
@@ -58,21 +71,20 @@ export function FilterPrice({
             <hr />
             <div>
               <div className={`${ShopStyle["filter__price__dropdown--stock"]}`}>
-               <RangePrice 
-               fieldLabel="from"
-              //  rangePrice={maxPrice}
-               highestPrice={highestPrice}
-               onChangeHandle={onChangeMax}
-               idRange='max-price'
-               />
-               <RangePrice 
-               fieldLabel="to"
-              //  rangePrice={minPrice}
-               highestPrice={highestPrice}
-               onChangeHandle={onChangeMin}
-               idRange="min-price"
-               />
-
+                <RangePrice
+                  fieldLabel="from"
+                  //  rangePrice={maxPrice}
+                  highestPrice={highestPrice}
+                  onChangeHandle={onChangeMax}
+                  idRange="max-price"
+                />
+                <RangePrice
+                  fieldLabel="to"
+                  //  rangePrice={minPrice}
+                  highestPrice={highestPrice}
+                  onChangeHandle={onChangeMin}
+                  idRange="min-price"
+                />
               </div>
             </div>
           </div>
@@ -81,8 +93,3 @@ export function FilterPrice({
     </div>
   );
 }
-
-
-
-
-
